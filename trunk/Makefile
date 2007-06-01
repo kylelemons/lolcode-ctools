@@ -41,7 +41,7 @@ ${BIS_SOURCE_OUT} : grammar.y
 
 clean :
 	@echo "  CLEAN"
-	rm *.yy.* *.tab.* grammar.output parser
+	rm *.o *.yy.* *.tab.* grammar.output parser
 
 %.o : %.c %.h
 	@echo "  CC [h]  $@"
