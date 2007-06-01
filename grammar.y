@@ -67,11 +67,11 @@ void *idup(int x)
 %start program
 
 %%
-program : prog_start stmts prog_end { printf("Valid program!\n"); $$ = CN(TN); AL($$,$2); root = $$; }
+program : prog_start stmts prog_end { $$ = CN(TN); AL($$,$2); root = $$; }
 ;
 
 array : array_index array  { $$ = CN(TN); ALL($$,$1,$2); } 
-      | T_WORD             { printf("[VAR:%s]", $1); $$ = CT(TN); AL($$,$1); }
+      | T_WORD             { $$ = CT(TN); AL($$,$1); }
 ;
 
 /*TODO: Figure out how to allow an expr as the index... */
@@ -86,16 +86,16 @@ assignment : LOL l_value R expr     { $$ = CN(TN); ALL($$,$2,$4); }
            | self_assignment      { $$ = CN(TN); }
 ;
 
-condexpr : expr BIGR_THAN expr      { printf("[>]"); $$ = CN(TN); ALL($$,$1,$3); }
-         | expr NOT BIGR_THAN expr  { printf("[<=]"); $$ = CN(TN); ALL($$,$1,$4); }
-         | expr SMALR_THAN expr     { printf("[<]"); $$ = CN(TN); ALL($$,$1,$3); }
-         | expr NOT SMALR_THAN expr { printf("[>=]");  $$ = CN(TN); ALL($$,$1,$4); }
-         | expr LIEK expr           { printf("[==]");  $$ = CN(TN); ALL($$,$1,$3); }
-         | expr NOT LIEK expr       { printf("[!=]");  $$ = CN(TN); ALL($$,$1,$4); }
-         | condexpr OR condexpr     { printf("[||]");  $$ = CN(TN); ALL($$,$1,$3); }
-         | condexpr AND condexpr    { printf("[&&]");  $$ = CN(TN); ALL($$,$1,$3); }
-         | condexpr XOR condexpr    { printf("[^^]");  $$ = CN(TN); ALL($$,$1,$3); }
-         | NOT condexpr             { printf("[!]");  $$ = CN(TN); AL($$,$2); }
+condexpr : expr BIGR_THAN expr      { $$ = CN(TN); ALL($$,$1,$3); }
+         | expr NOT BIGR_THAN expr  { $$ = CN(TN); ALL($$,$1,$4); }
+         | expr SMALR_THAN expr     { $$ = CN(TN); ALL($$,$1,$3); }
+         | expr NOT SMALR_THAN expr { $$ = CN(TN); ALL($$,$1,$4); }
+         | expr LIEK expr           { $$ = CN(TN); ALL($$,$1,$3); }
+         | expr NOT LIEK expr       { $$ = CN(TN); ALL($$,$1,$4); }
+         | condexpr OR condexpr     { $$ = CN(TN); ALL($$,$1,$3); }
+         | condexpr AND condexpr    { $$ = CN(TN); ALL($$,$1,$3); }
+         | condexpr XOR condexpr    { $$ = CN(TN); ALL($$,$1,$3); }
+         | NOT condexpr             { $$ = CN(TN); AL($$,$2); }
 ;
 
 conditional : IZ condexpr then stmts KTHX     { $$ = CN(TN); ALL($$,$2,$4); }
@@ -108,7 +108,7 @@ declaration : I_HAS_A array initializer     { $$ = CN(TN); ALL($$,$2,$3); }
 elsethen : NOWAI end_stmt
 ;
 
-end_stmt : NEWLINE           { printf("\n"); }
+end_stmt : NEWLINE           { }
 ;
 
 exit : DIAF exit_status exit_message     { $$ = CN(TN); ALL($$,$2,$3); }
@@ -126,18 +126,18 @@ exit_message : /* nothing */ { $$ = CT(TN); }
 ;
 
 array_expr : array              { $$ = CN(TN); AL($$,$1); }
-           | array UP expr      { printf("[+]");  $$ = CN(TN); ALL($$,$1,$3); }
-           | array NERF expr    { printf("[-]");  $$ = CN(TN); ALL($$,$1,$3); }
-           | array TIEMZ expr   { printf("[*]");  $$ = CN(TN); ALL($$,$1,$3); }
-           | array OVAR expr    { printf("[/]");  $$ = CN(TN); ALL($$,$1,$3); }
+           | array UP expr      { $$ = CN(TN); ALL($$,$1,$3); }
+           | array NERF expr    { $$ = CN(TN); ALL($$,$1,$3); }
+           | array TIEMZ expr   { $$ = CN(TN); ALL($$,$1,$3); }
+           | array OVAR expr    { $$ = CN(TN); ALL($$,$1,$3); }
 ;
 
-expr : T_NUMBER          { printf("[NUM:%d]", $1);  $$ = CT(TN); AL($$,idup($1)); }
-     | T_STRING          { printf("[STR:%s]", $1);  $$ = CT(TN); AL($$,$1); }
-     | expr UP expr      { printf("[+]");  $$ = CN(TN); ALL($$,$1,$3); }
-     | expr NERF expr    { printf("[-]");  $$ = CN(TN); ALL($$,$1,$3); }
-     | expr TIEMZ expr   { printf("[*]");  $$ = CN(TN); ALL($$,$1,$3); }
-     | expr OVAR expr    { printf("[/]");  $$ = CN(TN); ALL($$,$1,$3); }
+expr : T_NUMBER          { $$ = CT(TN); AL($$,idup($1)); }
+     | T_STRING          { $$ = CT(TN); AL($$,$1); }
+     | expr UP expr      { $$ = CN(TN); ALL($$,$1,$3); }
+     | expr NERF expr    { $$ = CN(TN); ALL($$,$1,$3); }
+     | expr TIEMZ expr   { $$ = CN(TN); ALL($$,$1,$3); }
+     | expr OVAR expr    { $$ = CN(TN); ALL($$,$1,$3); }
      | array_expr        { $$ = CN(TN); AL($$,$1); }
 ;
 
@@ -192,17 +192,17 @@ self_assignment : UPZ l_value P_EXCL P_EXCL increment_expr     { $$ = CN(TN); AL
                 | OVARZ l_value P_EXCL P_EXCL increment_expr     { $$ = CN(TN); ALL($$,$2,$5); }
 ;
 
-stmt : include               { printf("Inclusion");  $$ = CN(TN); AL($$,$1); }
-     | declaration           { printf("Declaration");  $$ = CN(TN); AL($$,$1); }
-     | loop                  { printf("Loop");  $$ = CN(TN); AL($$,$1); }
-     | conditional           { printf("Conditional");  $$ = CN(TN); AL($$,$1); }
-     | assignment            { printf("Assignment");  $$ = CN(TN); AL($$,$1); }
-     | input                 { printf("Input");  $$ = CN(TN); AL($$,$1); }
-     | output                { printf("Output");  $$ = CN(TN); AL($$,$1); }
-     | expr                  { printf("Expression");  $$ = CN(TN); AL($$,$1); }
-     | GTFO                  { printf("Break"); $$ = CT(TN); }
-     | exit                  { printf("Exit");  $$ = CN(TN); AL($$,$1); }
-     | COMMENT               { printf("/* COMMENT */"); $$ = CT(TN); }
+stmt : include               { $$ = CN(TN); AL($$,$1); }
+     | declaration           { $$ = CN(TN); AL($$,$1); }
+     | loop                  { $$ = CN(TN); AL($$,$1); }
+     | conditional           { $$ = CN(TN); AL($$,$1); }
+     | assignment            { $$ = CN(TN); AL($$,$1); }
+     | input                 { $$ = CN(TN); AL($$,$1); }
+     | output                { $$ = CN(TN); AL($$,$1); }
+     | expr                  { $$ = CN(TN); AL($$,$1); }
+     | GTFO                  { $$ = CT(TN); }
+     | exit                  { $$ = CN(TN); AL($$,$1); }
+     | COMMENT               { $$ = CT(TN); }
 ;
 
 stmts : /* No statements at all */     { $$ = CT(TN); }
