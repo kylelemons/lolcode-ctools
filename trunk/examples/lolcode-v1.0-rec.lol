@@ -50,8 +50,17 @@ HAI
       KTHX
     KTHX
 
+    BTW Test array indexing.
+    BTW   The following is equivalent to: (C-style)
+    BTW     bukkit[counter] = counter
     LOL COUNTER IN MAH BUKKIT R COUNTER
     OVARZ COUNTER IN MAH BUKKIT!!2
+    BTW   Because the array is on the LEFT SIDE of
+    BTW the assignment, the array will expand to fill.
+    BTW If you had tried to access bukkit[counter] first,
+    BTW this would not have happened, and chances are an
+    BTW error would have occured or your program would've
+    BTW crashed.
 
     BTW Self-assignment
     UPZ COUNTER!!
