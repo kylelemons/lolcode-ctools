@@ -42,11 +42,19 @@ void *idup(int x)
 %token <num> T_NUMBER 
 %token <str> T_WORD T_STRING
 %token <num> P_EXCL NEWLINE
-%token <num> A AND BIGR BYES CAN COMMENT DIAF GIMMEH GTFO HAI HAS 
-%token <num> I IM IN ITZ IZ KTHX KTHXBYE LIEK LETTAR LINE LOL MAH 
+%token <num> AND BIGR_THAN BYES CAN_HAS COMMENT DIAF GIMMEH GTFO HAI
+%token <num> I_HAS_A IM_IN_YR ITZ IZ KTHX KTHXBYE LIEK LETTAR LINE LOL
 %token <num> NERF NERFZ NOT NOWAI OR OUTTA OVAR OVARZ R 
-%token <num> SMALR STDIN THAN TIEMZ TIEMZD UP UPZ VISIBLE 
-%token <num> WORD XOR YARLY YR P_QMARK
+%token <num> STDIN TIEMZ TIEMZD UP UPZ VISIBLE 
+%token <num> WORD XOR YARLY P_QMARK
+
+%left UPZ NERFZ TIEMZD OVARZ R
+%left NOT
+%left AND OR XOR
+%left BIGR_THAN SMALR_THAN LIEK
+%left UP NERF
+%left TIEMZ OVAR
+%left IN_MAH
 
 %type <node> array array_index assignment condexpr conditional
 %type <node> declaration exit exit_status exit_message expr 
@@ -54,7 +62,7 @@ void *idup(int x)
 %type <node> l_value loop loop_label output program
 %type <node> self_assignment stmt stmts
 
-%expect 102
+%expect 74
 
 %start program
 
@@ -66,19 +74,22 @@ array : array_index array  { $$ = CN(TN); ALL($$,$1,$2); }
       | T_WORD             { printf("[VAR:%s]", $1); $$ = CT(TN); AL($$,$1); }
 ;
 
-/* TODO: Figure out how to allow an expr as the index... */
-array_index : T_NUMBER IN MAH { $$ = CT(TN); AL($$,idup($1)); }
-            | T_WORD IN MAH { $$ = CT(TN); AL($$,$1); }
+/*TODO: Figure out how to allow an expr as the index... */
+/*
+array_index : expr IN_MAH  { $$ = CN(TN); AL($$,$1); }
+*/
+array_index : T_NUMBER IN_MAH { $$ = CT(TN); AL($$,idup($1)); }
+            | T_WORD IN_MAH { $$ = CT(TN); AL($$,$1); }
 ;
 
 assignment : LOL l_value R expr     { $$ = CN(TN); ALL($$,$2,$4); }
            | self_assignment      { $$ = CN(TN); }
 ;
 
-condexpr : expr BIGR THAN expr      { printf("[>]"); $$ = CN(TN); ALL($$,$1,$4); }
-         | expr NOT BIGR THAN expr  { printf("[<=]"); $$ = CN(TN); ALL($$,$1,$5); }
-         | expr SMALR THAN expr     { printf("[<]"); $$ = CN(TN); ALL($$,$1,$4); }
-         | expr NOT SMALR THAN expr { printf("[>=]");  $$ = CN(TN); ALL($$,$1,$5); }
+condexpr : expr BIGR_THAN expr      { printf("[>]"); $$ = CN(TN); ALL($$,$1,$3); }
+         | expr NOT BIGR_THAN expr  { printf("[<=]"); $$ = CN(TN); ALL($$,$1,$4); }
+         | expr SMALR_THAN expr     { printf("[<]"); $$ = CN(TN); ALL($$,$1,$3); }
+         | expr NOT SMALR_THAN expr { printf("[>=]");  $$ = CN(TN); ALL($$,$1,$4); }
          | expr LIEK expr           { printf("[==]");  $$ = CN(TN); ALL($$,$1,$3); }
          | expr NOT LIEK expr       { printf("[!=]");  $$ = CN(TN); ALL($$,$1,$4); }
          | condexpr OR condexpr     { printf("[||]");  $$ = CN(TN); ALL($$,$1,$3); }
@@ -91,7 +102,7 @@ conditional : IZ condexpr then stmts KTHX     { $$ = CN(TN); ALL($$,$2,$4); }
             | IZ condexpr then stmts elsethen stmts KTHX     { $$ = CN(TN); ALLL($$,$2,$4,$6); }
 ;
 
-declaration : I HAS A array initializer     { $$ = CN(TN); ALL($$,$4,$5); }
+declaration : I_HAS_A array initializer     { $$ = CN(TN); ALL($$,$2,$3); }
 ;
 
 elsethen : NOWAI end_stmt
@@ -123,8 +134,8 @@ expr : T_NUMBER          { printf("[NUM:%d]", $1);  $$ = CT(TN); AL($$,idup($1))
      | expr OVAR expr    { printf("[/]");  $$ = CN(TN); ALL($$,$1,$3); }
 ;
 
-include : CAN HAS T_WORD P_QMARK   { $$ = CT(TN); AL($$,$3); }
-        | CAN HAS T_STRING P_QMARK { $$ = CT(TN); AL($$,$3); }
+include : CAN_HAS T_WORD P_QMARK   { $$ = CT(TN); AL($$,$2); }
+        | CAN_HAS T_STRING P_QMARK { $$ = CT(TN); AL($$,$2); }
 
 increment_expr : /* empty (defaults to 1) */     { $$ = CT(TN); }
                | expr     { $$ = CN(TN); AL($$,$1); }
@@ -151,7 +162,7 @@ input : GIMMEH input_type array input_from { $$ = CN(TN); ALLL($$,$2,$3,$4); }
 l_value : array     { $$ = CN(TN); AL($$,$1); }
 ;
 
-loop : IM IN YR loop_label end_stmt stmts KTHX     { $$ = CN(TN); ALL($$,$4,$6); }
+loop : IM_IN_YR loop_label end_stmt stmts KTHX     { $$ = CN(TN); ALL($$,$2,$4); }
 ;
 
 loop_label : T_WORD  { $$ = CT(TN); }
