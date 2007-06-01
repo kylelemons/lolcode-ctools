@@ -9,7 +9,7 @@ CPPCOMPILE=${CPP} ${CPPFLAGS} -c
 
 LINK=${CPP} ${LFLAGS} -o
 LEX=flex
-BISON=bison -v -d
+BISON=bison -v -d -k
 
 LEX_PREFIX=lex.yy
 BIS_PREFIX=grammar.tab
@@ -20,10 +20,12 @@ BIS_SOURCE_OUT=${BIS_PREFIX}.c
 BIS_HEADER_OUT=${BIS_PREFIX}.h
 BIS_SOURCE_OBJ=${BIS_PREFIX}.o
 
+MY_OBJ=ast.o
+
 all : parser
 
-parser : ${LEX_SOURCE_OBJ} ${BIS_SOURCE_OBJ}
-	${LINK} parser ${LEX_SOURCE_OBJ} ${BIS_SOURCE_OBJ}
+parser : ${LEX_SOURCE_OBJ} ${BIS_SOURCE_OBJ} ${MY_OBJ}
+	${LINK} parser ${LEX_SOURCE_OBJ} ${BIS_SOURCE_OBJ} ${MY_OBJ}
 
 ${LEX_SOURCE_OBJ} : ${LEX_SOURCE_OUT}
 
