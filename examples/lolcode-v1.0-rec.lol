@@ -18,6 +18,11 @@ HAI
   VISIBLE "Count to what? "!
   GIMMEH WORD MAXIMUM
 
+  BTW As we have no method of casting, we can't use the above.
+  BTW So... I'll cheat and make them constants.
+  LOL MINIMUM R 1
+  LOL MAXIMUM R 10
+
   BTW Error condition
   IZ MINIMUM BIGR THAN MAXIMUM
     DIAF 1 "I can't count backwards =("
