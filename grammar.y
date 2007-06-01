@@ -53,10 +53,10 @@ assignment : LOL l_value R r_value  //     { /* printf("Assigning: %s = %s", $2,
 
 condexpr : expr BIGR THAN expr      { printf("[>]"); }
          | expr NOT BIGR THAN expr  { printf("[<=]"); }
-         | expr SMALR THAN expr     { printf("[<=]"); }
-         | expr NOT SMALR THAN expr { printf("[<=]"); }
-         | expr LIEK expr           { printf("[<=]"); }
-         | expr NOT LIEK expr       { printf("[<=]"); }
+         | expr SMALR THAN expr     { printf("[<]"); }
+         | expr NOT SMALR THAN expr { printf("[>=]"); }
+         | expr LIEK expr           { printf("[==]"); }
+         | expr NOT LIEK expr       { printf("[!=]"); }
          | condexpr OR condexpr     { printf("[||]"); }
          | condexpr AND condexpr    { printf("[&&]"); }
          | condexpr XOR condexpr    { printf("[^^]"); }
@@ -131,6 +131,7 @@ loop : IM IN YR T_WORD end_stmt stmts KTHX
 ;
 
 output : VISIBLE expr
+       | VISIBLE expr P_EXCL
 ;
 
 prog_start : HAI end_stmt
@@ -162,9 +163,10 @@ stmt : include               { printf("Inclusion (%s)", $1); }
      | COMMENT               { printf("/* COMMENT */"); }
 ;
 
-stmts : stmt end_stmt
+stmts : /* No statements at all */
+      | stmts end_stmt /* empty line */
+      | stmt end_stmt
       | stmts stmt end_stmt
-      | /* no statements at all */
 ;
 
 then : end_stmt
