@@ -56,13 +56,13 @@ void *idup(int x)
 %left TIEMZ OVAR
 %left IN_MAH
 
-%type <node> array array_index assignment condexpr conditional
+%type <node> array array_expr array_index assignment condexpr conditional
 %type <node> declaration exit exit_status exit_message expr 
 %type <node> include increment_expr initializer input_type input_from input 
 %type <node> l_value loop loop_label output program
 %type <node> self_assignment stmt stmts
 
-%expect 74
+%expect 78
 
 %start program
 
@@ -125,13 +125,20 @@ exit_message : /* nothing */ { $$ = CT(TN); }
              | T_WORD        { $$ = CT(TN); AL($$,$1); }
 ;
 
+array_expr : array              { $$ = CN(TN); AL($$,$1); }
+           | array UP expr      { printf("[+]");  $$ = CN(TN); ALL($$,$1,$3); }
+           | array NERF expr    { printf("[-]");  $$ = CN(TN); ALL($$,$1,$3); }
+           | array TIEMZ expr   { printf("[*]");  $$ = CN(TN); ALL($$,$1,$3); }
+           | array OVAR expr    { printf("[/]");  $$ = CN(TN); ALL($$,$1,$3); }
+;
+
 expr : T_NUMBER          { printf("[NUM:%d]", $1);  $$ = CT(TN); AL($$,idup($1)); }
-     | array             { $$ = CN(TN); AL($$,$1); }
      | T_STRING          { printf("[STR:%s]", $1);  $$ = CT(TN); AL($$,$1); }
      | expr UP expr      { printf("[+]");  $$ = CN(TN); ALL($$,$1,$3); }
      | expr NERF expr    { printf("[-]");  $$ = CN(TN); ALL($$,$1,$3); }
      | expr TIEMZ expr   { printf("[*]");  $$ = CN(TN); ALL($$,$1,$3); }
      | expr OVAR expr    { printf("[/]");  $$ = CN(TN); ALL($$,$1,$3); }
+     | array_expr        { $$ = CN(TN); AL($$,$1); }
 ;
 
 include : CAN_HAS T_WORD P_QMARK   { $$ = CT(TN); AL($$,$2); }
