@@ -25,7 +25,7 @@ void str_app(char ch)
 %x strstate
 
 %%
-BTW.+$                  { return COMMENT; }
+BTW.*$                  { return COMMENT; }
 [0-9]+                  { yylval.num = atoi(yytext); return T_NUMBER; }
 \"                      { string_buf=NULL; strsize=0; BEGIN(strstate); }
 
