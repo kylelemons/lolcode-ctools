@@ -15,6 +15,10 @@ typedef struct ast_node_t {
 extern unsigned type_count;
 extern const char * const * type_names;
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 ast_node *create_ast_node(unsigned t, unsigned char term);
 
 void append_leaf(ast_node *node, void *leaf);
@@ -23,6 +27,10 @@ void print_tree(ast_node *node, unsigned indent);
 
 // NOTE! THIS IS NOT IN AST.C
 ast_node *generate_ast();
+
+#ifdef __cplusplus
+}
+#endif
 
 // defines to make this all shorter
 #define CN(x) create_ast_node(x,0)
