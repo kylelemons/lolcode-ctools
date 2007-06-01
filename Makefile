@@ -20,7 +20,7 @@ BIS_SOURCE_OUT=${BIS_PREFIX}.c
 BIS_HEADER_OUT=${BIS_PREFIX}.h
 BIS_SOURCE_OBJ=${BIS_PREFIX}.o
 
-MY_OBJ=ast.o
+MY_OBJ=ast.o parser.o
 
 all : parser
 

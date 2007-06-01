@@ -19,53 +19,15 @@ int yywrap()
 // Token string
 #define TS(x) type_names[x]
 // Token number
-#define TN ((yyr1[yyn]<=YYNTOKENS)?yyr1[yyn]:printf("LINE:%d->%d(on)%d\n",yyn,yyr1[yyn],__LINE__),yyr1[yyn])
-#undef TN
-#define TN (printf("\n{LINE=%d:yyn=%d:yystos=%d:yyr1=%d:yytname=%s,yytname2=%s}\n",__LINE__,yyn,yystos[yyn],yyr1[yyn],yytname[yyr1[yyn]],yytname[yyn]),yyn)
-#undef TN
 #define TN yyr1[yyn]
-
 ast_node *root = NULL;
 
+// Duplicate an integer for inclusion in the parse tree
 void *idup(int x)
 {
   int *r = (int *)malloc(sizeof(int));
   *r = x;
   return r;
-}
-
-void ws(unsigned indent)
-{
-  unsigned i;
-  for (i = 0; i < indent; ++i) printf(" ");
-}
-
-void print_tree(ast_node *node, unsigned indent)
-{
-  if (!node)
-  {
-    ws(indent); printf("<NULL>\n");
-    return;
-  }
-  if (!TS(node->type))
-  {
-    ws(indent); printf("Huh? TN = %d\n", node->type);
-  }
-  ws(indent); printf("{%s:%d:%p}\n", TS(node->type), node->nodecount, node->nodes);
-  if (node->terminal == 0)
-  {
-    unsigned n;
-    for (n = 0; n < node->nodecount; ++n)
-    {
-      if (node->nodes[n])
-      {
-        print_tree(node->nodes[n], indent+2);
-      }
-      else
-        ws(indent+2),printf("Uh ho! NULL\n");
-    }
-  }
-  //ws(indent+2),printf("<terminal>\n");
 }
 
 %}
@@ -238,21 +200,14 @@ then : end_stmt
 ;
 
 %%
-int main(int argc, char **argv)
+
+ast_node *generate_ast()
 {
   type_names = yytname;
 
+  root = NULL;
+
   yyparse();
 
-  printf("Parse tree:\n");
-  print_tree(root, 0);
-
-  /*
-  unsigned i;
-  for (i = 0; i < YYNTOKENS; ++i)
-   if (yytname[i])
-    printf("yytname[%d] = \"%s\" (KTHXBYE is %d);\n", i, yytname[i], KTHXBYE);
-  */
-
-  return 0;
+  return root;
 } 
