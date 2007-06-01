@@ -7,7 +7,7 @@ HAI
   I HAS A COUNTER
   I HAS A MAXIMUM
   I HAS A MINIMUM
-  I HAS A BUKKIT
+  I HAS A LIST
   I HAS A NAME
 
   BTW Input and output
@@ -52,13 +52,13 @@ HAI
 
     BTW Test array indexing.
     BTW   The following is equivalent to: (C-style)
-    BTW     bukkit[counter] = counter
-    BTW     bukkit[counter] /= 2
-    LOL COUNTER IN MAH BUKKIT R COUNTER
-    OVARZ COUNTER IN MAH BUKKIT!!2
+    BTW     list[counter] = counter
+    BTW     list[counter] /= 2
+    LOL COUNTER IN MAH LIST R COUNTER
+    OVARZ COUNTER IN MAH LIST!!2
     BTW   Because the array is on the LEFT SIDE of
     BTW the assignment, the array will expand to fill.
-    BTW If you had tried to access bukkit[counter] first,
+    BTW If you had tried to access list[counter] first,
     BTW this would not have happened, and chances are an
     BTW error would have occured or your program would've
     BTW crashed.
@@ -72,6 +72,13 @@ HAI
     KTHX
 
   KTHX
+
+  BTW More stuff on the same line.
+  I HAS A RATS. LOL RATS R 0
+  I HAS A SLIMY. LOL SLIMY R 10
+
+  BTW This is just too much to pass up.
+  I HAS A BUKKIT. LOL RATS IN MAH BUKKIT R SLIMY
 
   BYES 0 "Thanks for playing!"
 KTHXBYE
