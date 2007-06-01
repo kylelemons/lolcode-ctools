@@ -12,11 +12,17 @@ typedef struct ast_node_t {
   void **nodes;
 } ast_node;
 
-extern char **type_names;
+extern unsigned type_count;
+extern const char * const * type_names;
 
 ast_node *create_ast_node(unsigned t, unsigned char term);
 
 void append_leaf(ast_node *node, void *leaf);
+
+void print_tree(ast_node *node, unsigned indent);
+
+// NOTE! THIS IS NOT IN AST.C
+ast_node *generate_ast();
 
 // defines to make this all shorter
 #define CN(x) create_ast_node(x,0)
@@ -24,3 +30,6 @@ void append_leaf(ast_node *node, void *leaf);
 #define AL(x,y) append_leaf(x,y)
 #define ALL(x,y,z) AL(x,y),AL(x,z)
 #define ALLL(x,y,z,w) ALL(x,y,z),AL(x,w)
+
+// Print white space
+#define ws(c) { int _local_i; for (_local_i = 0; _local_i < c; ++_local_i) printf(" "); }
