@@ -53,6 +53,7 @@ HAI
     BTW Test array indexing.
     BTW   The following is equivalent to: (C-style)
     BTW     bukkit[counter] = counter
+    BTW     bukkit[counter] *= 2
     LOL COUNTER IN MAH BUKKIT R COUNTER
     OVARZ COUNTER IN MAH BUKKIT!!2
     BTW   Because the array is on the LEFT SIDE of
