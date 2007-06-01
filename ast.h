@@ -1,3 +1,6 @@
+#ifndef AST_H
+#define AST_H
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <malloc.h>
@@ -41,3 +44,5 @@ ast_node *generate_ast();
 
 // Print white space
 #define ws(c) { int _local_i; for (_local_i = 0; _local_i < c; ++_local_i) printf(" "); }
+
+#endif
