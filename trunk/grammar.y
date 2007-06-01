@@ -41,13 +41,15 @@ program : prog_start stmts prog_end { printf("Valid program!\n"); }
 ;
 
 array : array_index array
-      | T_WORD
+      | T_WORD             { printf("[VAR:%s]", $1); }
 ;
 
+/* TODO: Figure out how to allow an expr as the index... */
 array_index : T_NUMBER IN MAH
+            | T_WORD IN MAH
 ;
 
-assignment : LOL l_value R r_value  //     { /* printf("Assigning: %s = %s", $2, $4); */ }
+assignment : LOL l_value R expr  //     { /* printf("Assigning: %s = %s", $2, $4); */ }
            | self_assignment
 ;
 
@@ -91,7 +93,7 @@ exit_message : /* nothing */
 ;
 
 expr : T_NUMBER          { printf("[NUM:%d]", $1); }
-     | T_WORD            { printf("[VAR:%s]", $1); }
+     | array
      | T_STRING          { printf("[STR:%s]", $1); }
      | expr UP expr      { printf("[+]"); }
      | expr NERF expr    { printf("[-]"); }
@@ -106,7 +108,7 @@ increment_expr : /* empty (defaults to 1) */
                | expr
 ;
 
-initializer: ITZ r_value
+initializer: ITZ expr
            | /* empty */
 ;
 
@@ -141,13 +143,10 @@ prog_end   : KTHXBYE
            | prog_end end_stmt
 ;
 
-r_value : expr
-;
-
-self_assignment : UPZ T_WORD P_EXCL P_EXCL increment_expr
-                | NERFZ T_WORD P_EXCL P_EXCL increment_expr
-                | TIEMZD T_WORD P_EXCL P_EXCL increment_expr
-                | OVARZ T_WORD P_EXCL P_EXCL increment_expr
+self_assignment : UPZ l_value P_EXCL P_EXCL increment_expr
+                | NERFZ l_value P_EXCL P_EXCL increment_expr
+                | TIEMZD l_value P_EXCL P_EXCL increment_expr
+                | OVARZ l_value P_EXCL P_EXCL increment_expr
 ;
 
 stmt : include               { printf("Inclusion (%s)", $1); }
