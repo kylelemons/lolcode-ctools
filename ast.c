@@ -9,13 +9,14 @@
 const char * const * type_names = NULL;
 unsigned type_count = 0;
 
-ast_node *create_ast_node(unsigned t, unsigned char term)
+ast_node *create_ast_node(unsigned t, unsigned l, unsigned char term)
 {
   //printf("\n[[Creating %snode:%d:", (term?"terminal ":""), t);
   //fflush(stdout);
   //printf("%s]]\n", (type_names?type_names[t]:""));
   ast_node *node = (ast_node*)calloc(1, sizeof(ast_node));
   node->type = t;
+  node->lineno = l;
   node->terminal = term;
   return node;
 }
@@ -36,9 +37,9 @@ void print_tree(ast_node *node, unsigned indent)
   }
   if (node->type >= type_count)
   {
-    ws(indent); printf("Huh? TN = %d\n", node->type);
+    ws(indent); printf("Huh? TN = %d/%d\n", node->type,type_count);
   }
-  ws(indent); printf("{%s:%d:%p}\n", type_names[node->type], node->nodecount, node->nodes);
+  ws(indent); printf("{%s:%ld:%d:%p}\n", type_names[node->type], node->lineno, node->nodecount, node->nodes);
   if (node->terminal == 0)
   {
     unsigned n;
@@ -51,7 +52,6 @@ void print_tree(ast_node *node, unsigned indent)
       else
       {
         ws(indent+2); printf("Uh ho! NULL\n");
-
       }
     }
   }
