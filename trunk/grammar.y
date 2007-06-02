@@ -41,11 +41,11 @@ void *idup(int x)
 %token <str> T_WORD T_STRING
 %token <num> P_EXCL
 %token <ulong> NEWLINE
-%token <num> AND BIGR_THAN BYES CAN_HAS COMMENT DIAF GIMMEH GTFO HAI
-%token <num> I_HAS_A IM_IN_YR ITZ IZ KTHX KTHXBYE LIEK LETTAR LINE LOL
-%token <num> NERF NERFZ NOT NOWAI OR OUTTA OVAR OVARZ R 
-%token <num> STDIN TIEMZ TIEMZD UP UPZ VISIBLE 
-%token <num> WORD XOR YARLY P_QMARK
+%token <ulong> AND BIGR_THAN BYES CAN_HAS COMMENT DIAF GIMMEH GTFO HAI
+%token <ulong> I_HAS_A IM_IN_YR ITZ IZ KTHX KTHXBYE LIEK LETTAR LINE LOL
+%token <ulong> NERF NERFZ NOT NOWAI OR OUTTA OVAR OVARZ R 
+%token <ulong> STDIN TIEMZ TIEMZD UP UPZ VISIBLE 
+%token <ulong> WORD XOR YARLY P_QMARK
 
 %left UPZ NERFZ TIEMZD OVARZ R
 %left NOT
@@ -66,7 +66,7 @@ void *idup(int x)
 %start program
 
 %%
-program : prog_start stmts prog_end { $$ = CN(TN,LN); AL($$,$2); root = $$; }
+program : prog_start stmts prog_end { $$ = CN(TN,$1); AL($$,$2); root = $$; }
 ;
 
 array : array_index array  { $$ = CN(TN,LN); ALL($$,$1,$2); } 
@@ -97,8 +97,8 @@ condexpr : expr BIGR_THAN expr      { $$ = CN(TN,LN); ALL($$,$1,$3); }
          | NOT condexpr             { $$ = CN(TN,LN); AL($$,$2); }
 ;
 
-conditional : IZ condexpr then stmts KTHX     { $$ = CN(TN,LN); ALL($$,$2,$4); }
-            | IZ condexpr then stmts elsethen stmts KTHX     { $$ = CN(TN,LN); ALLL($$,$2,$4,$6); }
+conditional : IZ condexpr then stmts KTHX     { $$ = CN(TN,$1); ALL($$,$2,$4); }
+            | IZ condexpr then stmts elsethen stmts KTHX     { $$ = CN(TN,$1); ALLL($$,$2,$4,$6); }
 ;
 
 declaration : I_HAS_A array initializer     { $$ = CN(TN,LN); ALL($$,$2,$3); }
@@ -168,7 +168,7 @@ input : GIMMEH input_type array input_from { $$ = CN(TN,LN); ALLL($$,$2,$3,$4); 
 l_value : array     { $$ = CN(TN,LN); AL($$,$1); }
 ;
 
-loop : IM_IN_YR loop_label end_stmt stmts KTHX     { $$ = CN(TN,LN); ALL($$,$2,$4); }
+loop : IM_IN_YR loop_label end_stmt stmts KTHX     { $$ = CN(TN,$1); ALL($$,$2,$4); }
 ;
 
 loop_label : T_WORD  { $$ = CT(TN,LN); }
