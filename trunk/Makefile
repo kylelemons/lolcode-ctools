@@ -20,7 +20,7 @@ BIS_SOURCE_OUT=${BIS_PREFIX}.c
 BIS_HEADER_OUT=${BIS_PREFIX}.h
 BIS_SOURCE_OBJ=${BIS_PREFIX}.o
 
-MY_OBJ=ast.o parser.o
+MY_OBJ=ast.o parser.o lolcode.o
 
 all : parser
 
@@ -51,7 +51,7 @@ clean :
 	@echo "  CC      $@"
 	${CCOMPILE} $<
 
-%.o : %.cpp %.h
+%.o : %.cpp %.hpp
 	@echo "  CPP [h] $@"
 	${CPPCOMPILE} $<
 
