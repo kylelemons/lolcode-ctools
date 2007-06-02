@@ -41,10 +41,10 @@ void *idup(int x)
 %token <str> T_WORD T_STRING
 %token <num> P_EXCL
 %token <ulong> NEWLINE
-%token <ulong> AND BIGR_THAN BYES CAN_HAS COMMENT DIAF GIMMEH GTFO HAI
+%token <ulong> AND BIGR_THAN BYES CAN_HAS COMMENT DIAF FAIL GIMMEH GTFO HAI
 %token <ulong> I_HAS_A IM_IN_YR ITZ IZ KTHX KTHXBYE LIEK LETTAR LINE LOL
 %token <ulong> NERF NERFZ NOT NOWAI OR OUTTA OVAR OVARZ R 
-%token <ulong> STDIN TIEMZ TIEMZD UP UPZ VISIBLE 
+%token <ulong> STDIN TIEMZ TIEMZD UP UPZ VISIBLE WIN
 %token <ulong> WORD XOR YARLY P_QMARK
 
 %left UPZ NERFZ TIEMZD OVARZ R
@@ -58,8 +58,9 @@ void *idup(int x)
 %type <node> array array_expr array_index assignment condexpr conditional
 %type <node> declaration exit exit_status exit_message expr 
 %type <node> include increment_expr initializer input_type input_from input 
-%type <node> l_value loop loop_label output program prog_start prog_end
+%type <node> l_value loop loop_label output program
 %type <node> self_assignment stmt stmts
+%type <ulong> prog_start prog_end
 
 %expect 78
 
@@ -85,7 +86,9 @@ assignment : LOL l_value R expr     { $$ = CN(TN,LN); ALL($$,$2,$4); }
            | self_assignment      { $$ = CN(TN,LN); }
 ;
 
-condexpr : expr BIGR_THAN expr      { $$ = CN(TN,LN); ALL($$,$1,$3); }
+condexpr : WIN                      { int b = 1; $$ = CT(TN,LN); AL($$,idup(b)); }
+         | FAIL                     { int b = 0; $$ = CT(TN,LN); AL($$,idup(b)); }
+         | expr BIGR_THAN expr      { $$ = CN(TN,LN); ALL($$,$1,$3); }
          | expr NOT BIGR_THAN expr  { $$ = CN(TN,LN); ALL($$,$1,$4); }
          | expr SMALR_THAN expr     { $$ = CN(TN,LN); ALL($$,$1,$3); }
          | expr NOT SMALR_THAN expr { $$ = CN(TN,LN); ALL($$,$1,$4); }
@@ -219,7 +222,7 @@ then : end_stmt
 %%
 void yyerror(const char *str)
 {
-  fprintf(stderr,"error: %s on line %d\n",str,lineno);
+  fprintf(stderr,"error: %s on line %ld\n",str,lineno);
 }
  
 int yywrap()
