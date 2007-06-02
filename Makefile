@@ -43,6 +43,9 @@ clean :
 	@echo "  CLEAN"
 	rm *.o *.yy.* *.tab.* grammar.output parser
 
+doc : doxygen.conf
+	doxygen doxygen.conf
+
 %.o : %.c %.h
 	@echo "  CC [h]  $@"
 	${CCOMPILE} $<
