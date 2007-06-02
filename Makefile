@@ -29,15 +29,19 @@ lcc : ${LEX_SOURCE_OBJ} ${BIS_SOURCE_OBJ} ${MY_OBJ}
 
 ${LEX_SOURCE_OBJ} : ${LEX_SOURCE_OUT}
 
-${LEX_SOURCE_OUT} : lexer.l ${BIS_HEADER_OUT}
+${LEX_SOURCE_OUT} : lexer.l grammar.y ${BIS_HEADER_OUT}
 	${LEX} -o ${LEX_SOURCE_OUT} $<
 
 ${BIS_SOURCE_OBJ} : ${BIS_SOURCE_OUT}
 
 ${BIS_HEADER_OUT} : ${BIS_SOURCE_OUT}
 
-${BIS_SOURCE_OUT} : grammar.y
+${BIS_SOURCE_OUT} : grammar.y lexer.l
 	${BISON} -o ${BIS_SOURCE_OUT} --defines=${BIS_HEADER_OUT} $<
+
+lcc.o : lcc.cpp lolcode.hpp ast.h
+
+lolcode.o : lolcode.cpp lolcode.hpp ast.h
 
 clean :
 	@echo "  CLEAN"
