@@ -23,10 +23,11 @@ using namespace LOLCode;
 
 void usage(const char *progname)
 {
-  cerr << "Usage: " << progname << " [-Cvco]" << endl;
+  cerr << "Usage: " << progname << " [-Cvcpo]" << endl;
   cerr << "  -v           Verbose output" << endl;
   cerr << "  -C           Check only (enable verbose output and disable compiling)" << endl;
   cerr << "  -c           Compile into Assembly (default)" << endl;
+  cerr << "  -p           Print out the nodes in the A.S.T. (advanced)" << endl;
   cerr << "  -o <file>    Write compiler output to <file> (default: out.s)" << endl;
   exit(1);
 }
@@ -37,10 +38,11 @@ void usage(const char *progname)
 
 int main(int argc, char **argv)
 {
-  static char *options = "Cvco:";
+  static char *options = "Cvcpo:";
 
   bool verbose = false;
   bool compile = true;
+  bool print_ast = false;
 
   string output_file = "out.s";
 
@@ -53,6 +55,9 @@ int main(int argc, char **argv)
     if (c == -1) break;
     switch (c)
     {
+      case 'p':
+        print_ast = true;
+        break;
       case 'v':
         verbose = true;
         break;
@@ -83,13 +88,16 @@ int main(int argc, char **argv)
   }
   if (verbose)
     cout << "Valid A.S.T. generated!" << endl;
-
+  if (print_ast)
+    print_tree(root, 0);
+  
+  CompilerContext context;
   try
   {
     if (compile)
     {
       HookFunc run = hook_search( type_names[root->type] );
-      run(root);
+      run(root, context);
     }
   }
   catch (HookError e)
