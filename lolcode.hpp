@@ -3,6 +3,8 @@
 
 #include <string>
 #include <vector>
+#include <stack>
+#include <map>
 
 #include "ast.h"
 
@@ -17,19 +19,42 @@ namespace LOLCode
 {
   using std::string;
   using std::vector;
+  using std::stack;
+  using std::map;
 
   /*!
-   * \brief Return value from a Hook function.
+   * \brief Holds the current execution context of the compiler
+   *
+   * This holds all of the information that the compiler needs to keep track of
+   * throughout its execution, and it is passed by reference throughout the execution
+   * of the Abatract Syntax Tree.  This contains things like the final output, the headers
+   * that need to be set before the final output, the current state of various context-specific
+   * compile information, etc.
    */
-  typedef struct {
-    string type;                  /*!< The type stored at the void */
-    void *ptr;                    /*!< A pointer to the type described by type */
-  } HookReturn;
+
+  class CompilerContext
+  {
+    public:
+      unsigned int indent; /*!< Holds the current output indentation. =) */
+      unsigned int counter; /*!< This counter remains unique and should only increment */
+
+      map<string,bool> flags; /*!< Holds various flags that should persist */
+      vector<string> file_lines; /*!< Holds the source of the output program */
+      map<string,string> symbols; /*!< Holds the symbols we're using and their types */
+      map<string,string> variables; /*!< Holds the variables that we're using and their types */
+      map<string, vector<int> > dimensions; /*!< Holds the sizes of the arrays we're using */
+
+      stack<int> int_stack;
+      stack<string> string_stack;
+      stack<string> context_stack;
+
+      CompilerContext();
+  };
 
   /*! \brief The Abstract Syntax Tree (A.S.T) Node */
   typedef ast_node ASTNode;
   /*! \brief The types of functions stored in hooks */
-  typedef HookReturn (*HookFunc)(ASTNode *node);
+  typedef void (*HookFunc)(ASTNode *node, CompilerContext &context);
 
   /*!
    * \brief A function used to parse an A.S.T.
@@ -73,6 +98,12 @@ namespace LOLCode
    * \brief Searh for a hook
    */
   HookFunc hook_search(string id);
+
+  /*!
+   * \brief Convert anything to anything
+   */
+  template <typename IN, typename OUT>
+  OUT convert(IN i);
 }
 
 #endif

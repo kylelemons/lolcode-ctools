@@ -15,6 +15,25 @@ namespace LOLCode
 {
   using std::string;
 
+  CompilerContext::CompilerContext()
+    : indent(0)
+  {
+  }
+
+  /*!
+   * \param i The input value
+   * \return The converted value
+   */
+  template <typename IN, typename OUT>
+  OUT convert(IN i)
+  {
+    std::stringstream ss;
+    OUT o;
+    ss << i;
+    ss >> o;
+    return o;
+  }
+
   /*!
    * \param e The error
    * \param r The rule
@@ -104,18 +123,19 @@ namespace LOLCode
    * This handles the generalized program set-up and destruction.
    * 
    * \param node The node to traverse
+   * \param context The compiler context
    * \return The standard hook return
    * \throw HookError if a sub-node is not a recognized type (i.e. can't be executed)
    */
 
-  HookReturn program(ASTNode *node) 
+  void program(ASTNode *node, CompilerContext &context) 
   { 
-    HookReturn r = {"",NULL};
     string rule = type_names[node->type];
     unsigned line = node->lineno;
     try
     {
       cout << "HAI" << endl;
+      context.context_stack.push("global");
      
       if (!node->terminal)
       {
@@ -123,10 +143,11 @@ namespace LOLCode
         {
           ASTNode *child = (ASTNode*)node->nodes[i];
           string child_rule = type_names[child->type];
-          hook_search(child_rule)(child);
+          hook_search(child_rule)(child, context);
         }
       }
 
+      context.context_stack.pop();
       cout << "KTHXBYE" << endl;
     }
     catch (HookError e)
@@ -134,7 +155,53 @@ namespace LOLCode
       e.called_by(rule,line);
       throw e;
     }
-    return r;
+  }
+
+  /*!
+   * \brief Access an array
+   *
+   * This handles accessing arrays, and expanding them if necessary
+   * Children:
+   *  0. array_index
+   *  1. array
+   *   -or-
+   *  0. T_WORD
+   * 
+   * \param node The node to traverse
+   * \param context The compiler context
+   * \return The standard hook return
+   * \throw HookError if a sub-node is not a recognized type (i.e. can't be executed)
+   */
+
+  void array(ASTNode *node, CompilerContext &context) 
+  { 
+    string rule = type_names[node->type];
+    unsigned line = node->lineno;
+    try
+    {
+      if (node->nodecount == 1)
+      { // straight-up array
+      }
+      else if (node->nodecount == 2)
+      { // sub-indexed array
+        //ASTNode *array_index = (ASTNode*)node->nodes[0];
+        //ASTNode *array = (ASTNode*)node->nodes[1];
+
+      }
+      context.flags["r_value"] = true;
+      //hook_search( type_names[l_value->type] )(l_value, context);
+      context.flags["r_value"] = false;
+      //cout << " R " << std::flush;
+      context.flags["l_value"] = true;
+      //hook_search( type_names[r_value->type] )(r_value, context);
+      context.flags["l_value"] = false;
+      //cout << endl;
+    }
+    catch (HookError e)
+    {
+      e.called_by(rule,line);
+      throw e;
+    }
   }
 
   /*!
@@ -142,17 +209,17 @@ namespace LOLCode
    *
    * This handles assignment of variables (and declaration as well)
    * Children:
-   *  0. Loop label
-   *  1. Statements
+   *  0. l_value
+   *  1. r_value
    * 
    * \param node The node to traverse
+   * \param context The compiler context
    * \return The standard hook return
    * \throw HookError if a sub-node is not a recognized type (i.e. can't be executed)
    */
 
-  HookReturn assignment(ASTNode *node) 
+  void assignment(ASTNode *node, CompilerContext &context) 
   { 
-    HookReturn r = {"",NULL};
     string rule = type_names[node->type];
     unsigned line = node->lineno;
     try
@@ -161,9 +228,13 @@ namespace LOLCode
       ASTNode *r_value = (ASTNode*)node->nodes[1];
 
       cout << "    LOL " << std::flush;
-      hook_search( type_names[l_value->type] )(l_value);
+      context.flags["r_value"] = true;
+      hook_search( type_names[l_value->type] )(l_value, context);
+      context.flags["r_value"] = false;
       cout << " R " << std::flush;
-      hook_search( type_names[r_value->type] )(r_value);
+      context.flags["l_value"] = true;
+      hook_search( type_names[r_value->type] )(r_value, context);
+      context.flags["l_value"] = false;
       cout << endl;
     }
     catch (HookError e)
@@ -171,7 +242,6 @@ namespace LOLCode
       e.called_by(rule,line);
       throw e;
     }
-    return r;
   }
 
   /*!
@@ -183,23 +253,25 @@ namespace LOLCode
    *  1. Statements
    * 
    * \param node The node to traverse
+   * \param context The compiler context
    * \return The standard hook return
    * \throw HookError if a sub-node is not a recognized type (i.e. can't be executed)
    */
 
-  HookReturn loop(ASTNode *node) 
+  void loop(ASTNode *node, CompilerContext &context) 
   { 
-    HookReturn r = {"",NULL};
     string rule = type_names[node->type];
     unsigned line = node->lineno;
     try
     {
+      context.context_stack.push("loop"+convert<int,string>(context.counter++));
       ASTNode *label = (ASTNode*)node->nodes[0];
       ASTNode *inner = (ASTNode*)node->nodes[1];
 
       cout << "  IM IN YR " << (char *)(label->nodes[0]) << endl;
-      hook_search( type_names[inner->type] )(inner);
+      hook_search( type_names[inner->type] )(inner, context);
       cout << "  KTHX" << endl;
+      context.context_stack.pop();
       free(label->nodes[0]);
     }
     catch (HookError e)
@@ -207,7 +279,6 @@ namespace LOLCode
       e.called_by(rule,line);
       throw e;
     }
-    return r;
   }
 
   /*!
@@ -217,14 +288,14 @@ namespace LOLCode
    * them. This function does not append itself to the call stack (or it won't).
    * 
    * \param node The node to traverse
+   * \param context The compiler context
    * \return The standard hook return
    * \throw HookError If a sub-node is not a recognized type (i.e. can't be executed)
    * \throw HookError If the node is a terminal node
    */
 
-  HookReturn fork(ASTNode *node) 
+  void fork(ASTNode *node, CompilerContext &context)
   { 
-    HookReturn r = {"",NULL};
     string rule = type_names[node->type];
     unsigned line = node->lineno;
     if (!node->terminal)
@@ -234,24 +305,21 @@ namespace LOLCode
         ASTNode *child = (ASTNode*)node->nodes[i];
         string child_rule = type_names[child->type];
         line = child->lineno;
-        hook_search( type_names[child->type] )(child);
+        hook_search( type_names[child->type] )(child, context);
       }
     }
     else
     {
       throw HookError("Node is a terminal node!", rule, line);
     }
-    return r;
   }
 
   /*!
    * \brief Does nothing.
    */
-  HookReturn noop(ASTNode *node)
+  void noop(ASTNode *node, CompilerContext &context)
   {
-    HookReturn r = {"",NULL};
     cout << "  BTW Noop" << endl;
-    return r;
   }
 
   const Hook hooks[] = {
