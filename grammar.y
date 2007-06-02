@@ -58,7 +58,7 @@ void *idup(int x)
 %type <node> array array_expr array_index assignment condexpr conditional
 %type <node> declaration exit exit_status exit_message expr 
 %type <node> include increment_expr initializer input_type input_from input 
-%type <node> l_value loop loop_label output program
+%type <node> l_value loop loop_label output program prog_start prog_end
 %type <node> self_assignment stmt stmts
 
 %expect 78
@@ -178,11 +178,11 @@ output : VISIBLE expr     { $$ = CT(TN,LN); AL($$,$2); }
        | VISIBLE expr P_EXCL     { $$ = CT(TN,LN); AL($$,$2); }
 ;
 
-prog_start : HAI end_stmt
+prog_start : HAI end_stmt { $$ = $1 }
 ;
 
-prog_end   : KTHXBYE
-           | prog_end end_stmt
+prog_end   : KTHXBYE { $$ = $1 }
+           | prog_end end_stmt { $$ = $1 }
 ;
 
 self_assignment : UPZ l_value P_EXCL P_EXCL increment_expr     { $$ = CN(TN,LN); ALL($$,$2,$5); }
