@@ -1,0 +1,100 @@
+Meeting agenda for LOLCODE v1.0
+  Re: LOLCODE Developer Standardization Meeting
+  To convene: May 30, 2007 22:00 GMT
+  To be held: irc.freenode.net #LOLCODE
+
+1. Rules of the meeting
+  a. To facilitate the meeting, there will be one or two operators in the
+     channel.  This person will be responsible for voicing the appropriate
+     users, maintaining the peace in the channel, and keeping the meeting on
+     schedule.
+  b. The channel will be moderated.  Only users with voices or op may speak.
+  c. Only users who are developing an interpreter or compiler for LOLCODE may
+     be given voice privileges.  These people are the ones to whom suggestions
+     by bystanders (non-voiced users) should be directed, and they should
+     weigh the suggestion for its merits (not for its opinion) and paste it
+     verbatim in-channel if deemed relevant.
+  d. Bystanders are encouraged to use notices instead of messages.
+  e. Voting will be facilitated with the use of a bot.  Voting can be either
+     silent or public.  The following means of voting are supported:
+       [in-channel] "!yes" "!no" or "<botname>, yes" "<botname>, no"
+       /msg <botname> YES <channel>
+       /notice <botname YES <channel> (the bot will not confirm your vote)
+2. Standard references
+  a. See http://lolcode.com for the current LOLCODE canon and contributions.
+3. Quick IRC reference
+  a. /join #LOLCODE
+    - Join the channel specified (channels start with #)
+  b. /msg <user> <message goes here>
+    - Send a private message to the specified user
+    - Note, on freenode you must be registered!
+  c. /notice <user> <message goes here>
+    - Send a notice to the specified user
+    - Same as /msg, you must be registered
+  d. /part <channel>
+    - Leave a channel.
+    - An optional reason can be specified after the channel.
+  e. /quit <reason>
+    - Leave the IRC network for <reason>.
+4. Order of business
+  a. Call to order
+  b. Roll call
+    i.   All developers should state their project.
+    ii.  The moderator will give voices to appropriate users.
+  c. Minutes <none>
+  d. Officers' reports
+    -- If any of the creator(s) are present, they might want to say some
+       words.  Otherwise, no big deal.  Make sure you're read up on the
+       current LOLCODE canon and most of the contributions.
+  e. Commitee reports <none>
+  f. Old business
+    -- In this section, we will be discussing and ratifying the current
+       LOLCODE canon, modifying it if we see an overwhelming need to do so.
+    i.    CAN HAS <library>?
+           - Punctuation?
+           - Failure?
+           - "Require" or simply "Include"?
+           - Can this be used as a strict textual include of a file?
+               CAN HAS "functions.lolh"
+    ii.   GIMMEH <variable>
+           - Input a variable from standard input
+    iii.  HAI
+           - I think this will be unanimously ratified.
+    iv.   KTHXBYE
+           - Should this only be used to mark the end of the program?
+           - Also as a break (or, for example, DIAF/BBL)
+    v.    IM IN YR <loop>
+           - There's been a bit of contention here, but not much.
+           - Most people seem to like it, the question becomes
+             labels, and YR/UR
+    vi.   IM OUTTA YR <loop>
+           - It has been suggested that this should be replaced by KTHX
+    viii. VISIBLE <expression>
+           - Should we revamp STDIO?
+    ix.   I HAS A <var> IZ <val>
+           - This one is probably going to be the most talked about thing in
+             the old business section.
+           - Two syntaxes need to be decided upon, a strongly typed one and a
+             weakly typed one. (Probably just anotker keyword difference)
+           - A few other options:
+               I HAS A <var> R <val>
+               I HAS A <var> ITZ <val>
+               LOL VAR R VAL
+           - One of the issues with this is that IZ will conflict with the
+             very popular "IZ" for conditionals.
+  g. New business
+    -- Here is the bulk of our work today.  I have a proposal for the order,
+       but it should by no means be considered set in stone.
+    i.    if-then-elseif-else construct
+           - I won't even pretend to list all of the opinions on this one.
+    ii.   Strong typing vs. Weak typing
+           - This needs to be decided really quickly.
+    iii.  File/module inclusion
+           - Include other lol files and lolh files, etc
+           - Standard extension? .lol seems to be the most common
+    iv.   Motions for other things to be added
+           - These really need to go from most important to least important...
+           - We can't include everything in v1.0, so we need to only include
+             a minimum so that there is a workable basis for us to start our
+             interpreters and compilers.  OOP, Databases, etc. should all
+             probably wait until later!
