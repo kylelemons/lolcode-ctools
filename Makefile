@@ -41,8 +41,8 @@ ${BIS_SOURCE_OUT} : grammar.y
 
 clean :
 	@echo "  CLEAN"
-	rm *.yy.* *.tab.* grammar.output 
 	rm .o lcc
+	rm *.yy.* *.tab.* grammar.output 
 	rm -rf help/
 
 doc : doxygen.conf
