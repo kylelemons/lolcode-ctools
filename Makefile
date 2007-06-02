@@ -20,12 +20,12 @@ BIS_SOURCE_OUT=${BIS_PREFIX}.c
 BIS_HEADER_OUT=${BIS_PREFIX}.h
 BIS_SOURCE_OBJ=${BIS_PREFIX}.o
 
-MY_OBJ=ast.o parser.o lolcode.o
+MY_OBJ=ast.o lcc.o lolcode.o
 
-all : parser
+all : lcc
 
-parser : ${LEX_SOURCE_OBJ} ${BIS_SOURCE_OBJ} ${MY_OBJ}
-	${LINK} parser ${LEX_SOURCE_OBJ} ${BIS_SOURCE_OBJ} ${MY_OBJ}
+lcc : ${LEX_SOURCE_OBJ} ${BIS_SOURCE_OBJ} ${MY_OBJ}
+	${LINK} $@ ${LEX_SOURCE_OBJ} ${BIS_SOURCE_OBJ} ${MY_OBJ}
 
 ${LEX_SOURCE_OBJ} : ${LEX_SOURCE_OUT}
 
@@ -41,7 +41,9 @@ ${BIS_SOURCE_OUT} : grammar.y
 
 clean :
 	@echo "  CLEAN"
-	rm *.o *.yy.* *.tab.* grammar.output parser
+	rm *.yy.* *.tab.* grammar.output 
+	rm .o lcc
+	rm -rf help/
 
 doc : doxygen.conf
 	doxygen doxygen.conf
