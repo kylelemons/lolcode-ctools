@@ -174,7 +174,7 @@ l_value : array     { $$ = CN(TN,LN); AL($$,$1); }
 loop : IM_IN_YR loop_label end_stmt stmts KTHX     { $$ = CN(TN,$1); ALL($$,$2,$4); }
 ;
 
-loop_label : T_WORD  { $$ = CT(TN,LN); }
+loop_label : T_WORD  { $$ = CT(TN,LN); AL($$,$1); }
 ;
 
 output : VISIBLE expr     { $$ = CT(TN,LN); AL($$,$2); }
