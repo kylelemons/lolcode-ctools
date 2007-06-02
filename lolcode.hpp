@@ -59,7 +59,7 @@ namespace LOLCode
       unsigned       line;  /*!< The line on which the error occured */
       vector<string> calls; /*!< Error backtrace */
 
-      HookError(string e, unsigned l); /*!< Make a HookError */
+      HookError(string e, string r, unsigned l); /*!< Make a HookError */
       HookError(string full_error); /*!< Make a HookError that's not specifically line-based */
 
       void called_by(string e, unsigned l); /*!< Push a call onto the end of the call stack */
