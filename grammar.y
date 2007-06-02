@@ -83,7 +83,6 @@ array_index : T_NUMBER IN_MAH { $$ = CT(TN,LN); AL($$,idup($1)); }
 ;
 
 assignment : LOL l_value R expr     { $$ = CN(TN,LN); ALL($$,$2,$4); }
-           | self_assignment      { $$ = CN(TN,LN); }
 ;
 
 condexpr : WIN                      { int b = 1; $$ = CT(TN,LN); AL($$,idup(b)); }
@@ -199,6 +198,7 @@ stmt : include               { $$ = CN(TN,LN); AL($$,$1); }
      | loop                  { $$ = CN(TN,LN); AL($$,$1); }
      | conditional           { $$ = CN(TN,LN); AL($$,$1); }
      | assignment            { $$ = CN(TN,LN); AL($$,$1); }
+     | self_assignment       { $$ = CN(TN,LN); }
      | input                 { $$ = CN(TN,LN); AL($$,$1); }
      | output                { $$ = CN(TN,LN); AL($$,$1); }
      | expr                  { $$ = CN(TN,LN); AL($$,$1); }
@@ -210,7 +210,7 @@ stmt : include               { $$ = CN(TN,LN); AL($$,$1); }
 stmts : /* No statements at all */     { $$ = CT(TN,LN); }
       | stmts end_stmt /* empty line */     { $$ = CN(TN,LN); AL($$,$1); }
       | stmt end_stmt            { $$ = CN(TN,LN); AL($$,$1); }
-      | stmts stmt end_stmt      { $$ = CN(TN,LN); ALL($$,$2,$1); }
+      | stmts stmt end_stmt      { $$ = CN(TN,LN); ALL($$,$1,$2); }
 ;
 
 then : end_stmt
