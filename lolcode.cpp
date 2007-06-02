@@ -41,7 +41,7 @@ namespace LOLCode
   void HookError::called_by(string e, unsigned l)
   {
     std::stringstream ss;
-    ss << e << "/" << l;
+    ss << e << " (line #" << l << ")";
     calls.push_back(ss.str());
   }
 
@@ -83,7 +83,7 @@ namespace LOLCode
    * Search through the hooks and return a function that implements that hook
    * \param id The name of the hook you're looking for
    * \return a hook function
-   * \throw Throws an instance of hook_error if no hook is found
+   * \throw HookError If the hook is not found
    */
   HookFunc hook_search(string id)
   {
@@ -98,17 +98,125 @@ namespace LOLCode
     return hooks[i].func;
   }
 
+  /*!
+   * \brief Outer program block
+   *
+   * This handles the generalized program set-up and destruction.
+   * 
+   * \param node The node to traverse
+   * \return The standard hook return
+   * \throw HookError if a sub-node is not a recognized type (i.e. can't be executed)
+   */
+
   HookReturn program(ASTNode *node) 
   { 
     HookReturn r = {"",NULL};
-    cout << "HAI" << endl;
+    string rule = type_names[node->type];
+    unsigned line = node->lineno;
+    try
+    {
+      cout << "HAI" << endl;
+     
+      if (!node->terminal)
+      {
+        for (unsigned i = 0; i < node->nodecount; ++i)
+        {
+          ASTNode *child = (ASTNode*)node->nodes[i];
+          string child_rule = type_names[child->type];
+          HookFunc run = hook_search(child_rule);
+          run(child);
+        }
+      }
 
-    cout << "KTHXBYE" << endl;
+      cout << "KTHXBYE" << endl;
+    }
+    catch (HookError e)
+    {
+      e.called_by(rule,line);
+      throw e;
+    }
+    return r;
+  }
+
+  /*!
+   * \brief Run a loop
+   *
+   * This handles the infinite looping mechanism
+   * Children:
+   *  0. Loop label
+   *  1. Statements
+   * 
+   * \param node The node to traverse
+   * \return The standard hook return
+   * \throw HookError if a sub-node is not a recognized type (i.e. can't be executed)
+   */
+
+  HookReturn loop(ASTNode *node) 
+  { 
+    HookReturn r = {"",NULL};
+    string rule = type_names[node->type];
+    unsigned line = node->lineno;
+    try
+    {
+      cout << rule << ": children = " << node->nodecount << endl;
+      ASTNode *label = (ASTNode*)node->nodes[0];
+      ASTNode *inner = (ASTNode*)node->nodes[1];
+
+      cout << "  IM IN YR " << (char *)(label->nodes[0]) << endl;
+      HookFunc run = hook_search( type_names[inner->type] );
+      run(inner);
+      cout << "  KTHX" << endl;
+      free(label->nodes[0]);
+    }
+    catch (HookError e)
+    {
+      e.called_by(rule,line);
+      throw e;
+    }
+    return r;
+  }
+
+
+  /*!
+   * \brief Call blindly all of the nodes linked to this one.
+   *
+   * Iterate through all of the children nodes attached to this one and call
+   * them. This function does not append itself to the call stack (or it won't).
+   * 
+   * \param node The node to traverse
+   * \return The standard hook return
+   * \throw HookError If a sub-node is not a recognized type (i.e. can't be executed)
+   * \throw HookError If the node is a terminal node
+   */
+
+  HookReturn fork(ASTNode *node) 
+  { 
+    HookReturn r = {"",NULL};
+    string rule = type_names[node->type];
+    unsigned line = node->lineno;
+    if (!node->terminal)
+    {
+      for (unsigned i = 0; i < node->nodecount; ++i)
+      {
+        ASTNode *child = (ASTNode*)node->nodes[i];
+        string child_rule = type_names[child->type];
+        HookFunc run = hook_search(child_rule);
+        run(child);
+      }
+    }
+    else
+    {
+      throw HookError(rule + ": Node is a terminal node!", line);
+    }
     return r;
   }
 
   const Hook hooks[] = {
     { "program", program },
+    { "stmts", fork },
+    { "stmt", fork },
+    { "loops", fork },
+    { "loop", loop },
     { NULL, NULL }
   };
 }
