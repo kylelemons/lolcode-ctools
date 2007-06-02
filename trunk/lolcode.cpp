@@ -17,12 +17,13 @@ namespace LOLCode
 
   /*!
    * \param e The error
+   * \param r The rule
    * \param l The line on which the error occured
    */
-  HookError::HookError(string e, unsigned l)
+  HookError::HookError(string e, string r, unsigned l)
     : error(e), line(l)
   {
-    called_by(e,l);
+    called_by(r,l);
   }
 
   /*!
@@ -31,7 +32,6 @@ namespace LOLCode
   HookError::HookError(string fullerror)
     : error(fullerror), line(-1)
   {
-    calls.push_back(fullerror);
   }
 
   /*!
@@ -61,7 +61,7 @@ namespace LOLCode
    */
   string HookError::to_string() const
   {
-    return calls[0];
+    return error;
   }
 
   /*!
@@ -123,12 +123,48 @@ namespace LOLCode
         {
           ASTNode *child = (ASTNode*)node->nodes[i];
           string child_rule = type_names[child->type];
-          HookFunc run = hook_search(child_rule);
-          run(child);
+          hook_search(child_rule)(child);
         }
       }
 
       cout << "KTHXBYE" << endl;
+    }
+    catch (HookError e)
+    {
+      e.called_by(rule,line);
+      throw e;
+    }
+    return r;
+  }
+
+  /*!
+   * \brief Run an assignment
+   *
+   * This handles assignment of variables (and declaration as well)
+   * Children:
+   *  0. Loop label
+   *  1. Statements
+   * 
+   * \param node The node to traverse
+   * \return The standard hook return
+   * \throw HookError if a sub-node is not a recognized type (i.e. can't be executed)
+   */
+
+  HookReturn assignment(ASTNode *node) 
+  { 
+    HookReturn r = {"",NULL};
+    string rule = type_names[node->type];
+    unsigned line = node->lineno;
+    try
+    {
+      ASTNode *l_value = (ASTNode*)node->nodes[0];
+      ASTNode *r_value = (ASTNode*)node->nodes[1];
+
+      cout << "    LOL " << std::flush;
+      hook_search( type_names[l_value->type] )(l_value);
+      cout << " R " << std::flush;
+      hook_search( type_names[r_value->type] )(r_value);
+      cout << endl;
     }
     catch (HookError e)
     {
@@ -158,13 +194,11 @@ namespace LOLCode
     unsigned line = node->lineno;
     try
     {
-      cout << rule << ": children = " << node->nodecount << endl;
       ASTNode *label = (ASTNode*)node->nodes[0];
       ASTNode *inner = (ASTNode*)node->nodes[1];
 
       cout << "  IM IN YR " << (char *)(label->nodes[0]) << endl;
-      HookFunc run = hook_search( type_names[inner->type] );
-      run(inner);
+      hook_search( type_names[inner->type] )(inner);
       cout << "  KTHX" << endl;
       free(label->nodes[0]);
     }
@@ -175,7 +209,6 @@ namespace LOLCode
     }
     return r;
   }
-
 
   /*!
    * \brief Call blindly all of the nodes linked to this one.
@@ -200,23 +233,36 @@ namespace LOLCode
       {
         ASTNode *child = (ASTNode*)node->nodes[i];
         string child_rule = type_names[child->type];
-        HookFunc run = hook_search(child_rule);
-        run(child);
+        line = child->lineno;
+        hook_search( type_names[child->type] )(child);
       }
     }
     else
     {
-      throw HookError(rule + ": Node is a terminal node!", line);
+      throw HookError("Node is a terminal node!", rule, line);
     }
     return r;
   }
 
+  /*!
+   * \brief Does nothing.
+   */
+  HookReturn noop(ASTNode *node)
+  {
+    HookReturn r = {"",NULL};
+    cout << "  BTW Noop" << endl;
+    return r;
+  }
+
   const Hook hooks[] = {
-    { "program", program },
-    { "stmts", fork },
-    { "stmt", fork },
-    { "loops", fork },
+    { "assignment", assignment },
+    { "declaration", assignment },
+    { "include", noop },
     { "loop", loop },
+    { "loops", fork },
+    { "program", program },
+    { "stmt", fork },
+    { "stmts", fork },
     { NULL, NULL }
   };
 }
