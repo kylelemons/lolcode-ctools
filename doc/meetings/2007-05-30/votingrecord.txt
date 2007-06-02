@@ -1,0 +1,708 @@
+[May 30 18:14:41] <+kYx-ng> A poll is being started:
+[May 30 18:14:41] <+kYx-ng>   Keep the "CAN HAS" (!yes) or change it (!no) regardless of suffix and arguments.
+[May 30 18:14:41] <+kYx-ng> Type !yes, !me, !no, or !notme to vote.
+[May 30 18:14:46] <+kYx-ng> Thank you, KrazyJim, your vote of YES has been counted.
+[May 30 18:14:52] <+kYx-ng> Thank you, lolcode_com, your vote of YES has been counted.
+[May 30 18:14:52] <+kYx-ng> Thank you, viraptor, your vote of YES has been counted.
+[May 30 18:14:52] <+kYx-ng> Thank you, johan-s, your vote of YES has been counted.
+[May 30 18:14:54] <+kYx-ng> Thank you, Tetraboy, your vote of YES has been counted.
+[May 30 18:14:56] <+kYx-ng> Thank you, Ihoss, your vote of YES has been counted.
+[May 30 18:16:41] <+kYx-ng> The results are in!
+[May 30 18:16:41] <+kYx-ng>   Keep the "CAN HAS" (!yes) or change it (!no) regardless of suffix and arguments.
+[May 30 18:16:41] <+kYx-ng>   Yea: 7
+[May 30 18:16:41] <+kYx-ng>   Nea: 0
+[May 30 18:16:41] <+kYx-ng> The yeas win by a landslide!
+[May 30 18:21:11] <+kYx-ng> A poll is being started:
+[May 30 18:21:11] <+kYx-ng>   Both (!yes) or one or the other  (!no)
+[May 30 18:21:11] <+kYx-ng> Type !yes, !me, !no, or !notme to vote.
+[May 30 18:21:19] <+kYx-ng> Thank you, aarcane, your vote of NO has been counted.
+[May 30 18:21:20] <+kYx-ng> Thank you, lolcode_com, your vote of NO has been counted.
+[May 30 18:21:22] <+kYx-ng> Thank you, Tetraboy, your vote of YES has been counted.
+[May 30 18:21:25] <+kYx-ng> Thank you, viraptor, your vote of NO has been counted.
+[May 30 18:21:26] <+kYx-ng> Thank you, Jessicatz, your vote of YES has been counted.
+[May 30 18:21:32] <+kYx-ng> Thank you, KrazyJim, your vote of NO has been counted.
+[May 30 18:21:39] <+kYx-ng> Thank you, Ihoss, your vote of NO has been counted.
+[May 30 18:21:41] <+kYx-ng> Thank you, johan-s, your vote of NO has been counted.
+[May 30 18:21:55] <+kYx-ng> The results are in!
+[May 30 18:21:55] <+kYx-ng>   Both (!yes) or one or the other  (!no)
+[May 30 18:21:55] <+kYx-ng>   Yea: 3
+[May 30 18:21:55] <+kYx-ng>   Nea: 6
+[May 30 18:21:55] <+kYx-ng> The neas win!
+[May 30 18:22:23] <+kYx-ng> A poll is being started:
+[May 30 18:22:23] <+kYx-ng>   Require (yes) or include (no)
+[May 30 18:22:23] <+kYx-ng> Type !yes, !me, !no, or !notme to vote.
+[May 30 18:22:30] <+kYx-ng> Thank you, KrazyJim, your vote of YES has been counted.
+[May 30 18:22:33] <+kYx-ng> Thank you, aarcane, your vote of NO has been counted.
+[May 30 18:22:39] <+kYx-ng> Thank you, lolcode_com, your vote of NO has been counted.
+[May 30 18:22:51] <+kYx-ng> Thank you, Ihoss, your vote of YES has been counted.
+[May 30 18:22:58] <+kYx-ng> Thank you, viraptor, your vote of NO has been counted.
+[May 30 18:22:59] <+kYx-ng> Thank you, Jessicatz, your vote of NO has been counted.
+[May 30 18:23:02] <+kYx-ng> Thank you, johan-s, your vote of YES has been counted.
+[May 30 18:23:07] <+kYx-ng> Thank you, lolcode_com, your vote has been changed to YES.
+[May 30 18:23:20] <+kYx-ng> Thank you, viraptor, your vote has been changed to YES.
+[May 30 18:23:23] <+kYx-ng> The results are in!
+[May 30 18:23:23] <+kYx-ng>   Require (yes) or include (no)
+[May 30 18:23:23] <+kYx-ng>   Yea: 6
+[May 30 18:23:23] <+kYx-ng>   Nea: 3
+[May 30 18:23:28] <+kYx-ng> The yeas win!
+[May 30 18:25:09] <+kYx-ng> A poll is being started:
+[May 30 18:25:09] <+kYx-ng>   Should "CAN HAS" have a "?" at the end?
+[May 30 18:25:09] <+kYx-ng> Type !yes, !me, !no, or !notme to vote.
+[May 30 18:25:15] <+kYx-ng> Thank you, viraptor, your vote of YES has been counted.
+[May 30 18:25:17] <+kYx-ng> Thank you, Ihoss, your vote of YES has been counted.
+[May 30 18:25:19] <+kYx-ng> Thank you, lolcode_com, your vote of YES has been counted.
+[May 30 18:25:19] <+kYx-ng> Thank you, Eko, your vote of YES has been counted.
+[May 30 18:25:23] <+kYx-ng> Thank you, KrazyJim, your vote of YES has been counted.
+[May 30 18:25:24] <+kYx-ng> Thank you, aarcane, your vote of YES has been counted.
+[May 30 18:25:25] <+kYx-ng> Thank you, Jessicatz, your vote of YES has been counted.
+[May 30 18:25:36] <+kYx-ng> Thank you, johan-s, your vote of YES has been counted.
+[May 30 18:26:08] <+kYx-ng> The results are in!
+[May 30 18:26:08] <+kYx-ng>   Should "CAN HAS" have a "?" at the end?
+[May 30 18:26:08] <+kYx-ng>   Yea: 9
+[May 30 18:26:08] <+kYx-ng>   Nea: 1
+[May 30 18:26:08] <+kYx-ng> The yeas win by a landslide!
+[May 30 18:27:34] <+kYx-ng> A poll is being started:
+[May 30 18:27:34] <+kYx-ng>   Keep "GIMMEH"? (no to change it)
+[May 30 18:27:34] <+kYx-ng> Type !yes, !me, !no, or !notme to vote.
+[May 30 18:27:38] <+kYx-ng> Thank you, viraptor, your vote of YES has been counted.
+[May 30 18:27:39] <+kYx-ng> Thank you, KrazyJim, your vote of YES has been counted.
+[May 30 18:27:41] <+kYx-ng> Thank you, aarcane, your vote of YES has been counted.
+[May 30 18:27:42] <+kYx-ng> Thank you, Eko, your vote of YES has been counted.
+[May 30 18:27:43] <+kYx-ng> Thank you, lolcode_com, your vote of YES has been counted.
+[May 30 18:27:46] <+kYx-ng> Thank you, Ihoss, your vote of YES has been counted.
+[May 30 18:27:49] <+kYx-ng> Thank you, johan-s, your vote of YES has been counted.
+[May 30 18:28:33] <+kYx-ng> The results are in!
+[May 30 18:28:33] <+kYx-ng>   Keep "GIMMEH"? (no to change it)
+[May 30 18:28:33] <+kYx-ng>   Yea: 7
+[May 30 18:28:33] <+kYx-ng>   Nea: 1
+[May 30 18:28:33] <+kYx-ng> The yeas win by a landslide!
+[May 30 18:35:16] <+kYx-ng> A poll is being started:
+[May 30 18:35:16] <+kYx-ng>   Keep "GIMMEH (LINE|WORD|LETTAR) <VAR> [OUTTA <filedesc>]" AS-IS? (no if you dislike anything at all)
+[May 30 18:35:16] <+kYx-ng> Type !yes, !me, !no, or !notme to vote.
+[May 30 18:35:20] <+kYx-ng> Thank you, Eko, your vote of YES has been counted.
+[May 30 18:35:22] <+kYx-ng> Thank you, viraptor, your vote of YES has been counted.
+[May 30 18:35:23] <+kYx-ng> Thank you, KrazyJim, your vote of YES has been counted.
+[May 30 18:35:23] <+kYx-ng> Thank you, aarcane, your vote of YES has been counted.
+[May 30 18:35:24] <+kYx-ng> Thank you, lolcode_com, your vote of NO has been counted.
+[May 30 18:35:27] <+kYx-ng> Thank you, johan-s, your vote of NO has been counted.
+[May 30 18:35:40] <+kYx-ng> Thank you, Ihoss, your vote of NO has been counted.
+[May 30 18:35:53] <+kYx-ng> Thank you, Eko, your vote has been changed to NO.
+[May 30 18:36:00] <+kYx-ng> The results are in!
+[May 30 18:36:00] <+kYx-ng>   Keep "GIMMEH (LINE|WORD|LETTAR) <VAR> [OUTTA <filedesc>]" AS-IS? (no if you dislike anything at all)
+[May 30 18:36:00] <+kYx-ng>   Yea: 4
+[May 30 18:36:00] <+kYx-ng>   Nea: 5
+[May 30 18:36:01] <+kYx-ng> The neas win!
+[May 30 18:40:55] <+kYx-ng> A poll is being started:
+[May 30 18:40:55] <+kYx-ng>   Should the default be line-based I/O into a variable with GIMMEH? no for word-based.
+[May 30 18:40:55] <+kYx-ng> Type !yes, !me, !no, or !notme to vote.
+[May 30 18:41:02] <+kYx-ng> Thank you, Eko, your vote of NO has been counted.
+[May 30 18:41:06] <+kYx-ng> Thank you, Ihoss, your vote of YES has been counted.
+[May 30 18:41:09] <+kYx-ng> Thank you, Tetraboy, your vote of NO has been counted.
+[May 30 18:41:10] <+kYx-ng> Thank you, KrazyJim, your vote of YES has been counted.
+[May 30 18:41:11] <+kYx-ng> Thank you, lolcode_com, your vote of YES has been counted.
+[May 30 18:41:16] <+kYx-ng> Thank you, aarcane, your vote of YES has been counted.
+[May 30 18:41:22] <+kYx-ng> Thank you, johan-s, your vote of YES has been counted.
+[May 30 18:41:28] <+kYx-ng> Thank you, viraptor, your vote of YES has been counted.
+[May 30 18:41:29] <+kYx-ng> Thank you, Tetraboy, your vote has been changed to YES.
+[May 30 18:41:54] <+kYx-ng> The results are in!
+[May 30 18:41:54] <+kYx-ng>   Should the default be line-based I/O into a variable with GIMMEH? no for word-based.
+[May 30 18:41:54] <+kYx-ng>   Yea: 8
+[May 30 18:41:54] <+kYx-ng>   Nea: 1
+[May 30 18:41:54] <+kYx-ng> The yeas win by a landslide!
+[May 30 18:42:16] <+kYx-ng> A poll is being started:
+[May 30 18:42:16] <+kYx-ng>   Keep "GIMMEH [(LINE|WORD|LETTAR)] <VAR> [OUTTA <filedesc>]" with default being LINE and STDIN? (no if you dislike anything at all)
+[May 30 18:42:16] <+kYx-ng> Type !yes, !me, !no, or !notme to vote.
+[May 30 18:42:26] <+kYx-ng> Thank you, Eko, your vote of YES has been counted.
+[May 30 18:42:29] <+kYx-ng> Thank you, KrazyJim, your vote of YES has been counted.
+[May 30 18:42:30] <+kYx-ng> Thank you, viraptor, your vote of YES has been counted.
+[May 30 18:42:31] <+kYx-ng> Thank you, Tetraboy, your vote of NO has been counted.
+[May 30 18:42:42] <+kYx-ng> Thank you, lolcode_com, your vote of YES has been counted.
+[May 30 18:42:42] <+kYx-ng> Thank you, Ihoss, your vote of NO has been counted.
+[May 30 18:43:00] <+kYx-ng> The results are in!
+[May 30 18:43:00] <+kYx-ng>   Keep "GIMMEH [(LINE|WORD|LETTAR)] <VAR> [OUTTA <filedesc>]" with default being LINE and STDIN? (no if you dislike anything at all)
+[May 30 18:43:00] <+kYx-ng>   Yea: 5
+[May 30 18:43:00] <+kYx-ng>   Nea: 2
+[May 30 18:43:06] <+kYx-ng> The yeas win!
+[May 30 18:45:20] <+kYx-ng> A poll is being started:
+[May 30 18:45:20] <+kYx-ng>   Keep HAI as-is?
+[May 30 18:45:20] <+kYx-ng> Type !yes, !me, !no, or !notme to vote.
+[May 30 18:45:21] <+kYx-ng> Thank you, Eko, your vote of YES has been counted.
+[May 30 18:45:22] <+kYx-ng> Thank you, aarcane, your vote of YES has been counted.
+[May 30 18:45:27] <+kYx-ng> Thank you, Ihoss, your vote of YES has been counted.
+[May 30 18:45:27] <+kYx-ng> Thank you, lolcode_com, your vote of YES has been counted.
+[May 30 18:45:27] <+kYx-ng> Thank you, johan-s, your vote of YES has been counted.
+[May 30 18:45:28] <+kYx-ng> Thank you, KrazyJim, your vote of YES has been counted.
+[May 30 18:45:31] <+kYx-ng> Thank you, Tetraboy, your vote of YES has been counted.
+[May 30 18:45:38] <+kYx-ng> Thank you, viraptor, your vote of YES has been counted.
+[May 30 18:45:49] <+kYx-ng> The results are in!
+[May 30 18:45:49] <+kYx-ng>   Keep HAI as-is?
+[May 30 18:45:49] <+kYx-ng>   Yea: 8
+[May 30 18:45:49] <+kYx-ng>   Nea: 0
+[May 30 18:45:49] <+kYx-ng> The yeas win by a landslide!
+[May 30 18:52:22] <+kYx-ng> A poll is being started:
+[May 30 18:52:22] <+kYx-ng>   "KTHXBYE only closes HAI and exits with good condition (something else for exiting in between HAI/KTHXBYE)?"
+[May 30 18:52:22] <+kYx-ng> Type !yes, !me, !no, or !notme to vote.
+[May 30 18:52:25] <+kYx-ng> Thank you, Eko, your vote of YES has been counted.
+[May 30 18:52:27] <+kYx-ng> Thank you, viraptor, your vote of YES has been counted.
+[May 30 18:52:29] <+kYx-ng> Thank you, KrazyJim, your vote of YES has been counted.
+[May 30 18:52:29] <+kYx-ng> Thank you, aarcane, your vote of YES has been counted.
+[May 30 18:52:30] <+kYx-ng> Thank you, lolcode_com, your vote of NO has been counted.
+[May 30 18:52:33] <+kYx-ng> Thank you, Ihoss, your vote of YES has been counted.
+[May 30 18:52:34] <+kYx-ng> Thank you, johan-s, your vote of YES has been counted.
+[May 30 18:52:51] <+kYx-ng> The results are in!
+[May 30 18:52:51] <+kYx-ng>   "KTHXBYE only closes HAI and exits with good condition (something else for exiting in between HAI/KTHXBYE)?"
+[May 30 18:52:51] <+kYx-ng>   Yea: 7
+[May 30 18:52:51] <+kYx-ng>   Nea: 1
+[May 30 18:52:51] <+kYx-ng> The yeas win by a landslide!
+[May 30 18:57:32] <+kYx-ng> A poll is being started:
+[May 30 18:57:32] <+kYx-ng>   DIAF [<num> [<text>]]?
+[May 30 18:57:32] <+kYx-ng> Type !yes, !me, !no, or !notme to vote.
+[May 30 18:57:37] <+kYx-ng> Thank you, viraptor, your vote of YES has been counted.
+[May 30 18:57:37] <+kYx-ng> Thank you, KrazyJim, your vote of YES has been counted.
+[May 30 18:57:39] <+kYx-ng> Thank you, aarcane, your vote of NO has been counted.
+[May 30 18:57:39] <+kYx-ng> Thank you, lolcode_com, your vote of YES has been counted.
+[May 30 18:57:44] <+kYx-ng> Thank you, Eko, your vote of YES has been counted.
+[May 30 18:57:45] <+kYx-ng> Thank you, Ihoss, your vote of YES has been counted.
+[May 30 18:57:48] <+kYx-ng> Thank you, johan-s, your vote of NO has been counted.
+[May 30 18:57:59] <+kYx-ng> Thank you, lolcode_com, your vote has been changed to NO.
+[May 30 18:58:01] <+kYx-ng> The results are in!
+[May 30 18:58:01] <+kYx-ng>   DIAF [<num> [<text>]]?
+[May 30 18:58:01] <+kYx-ng>   Yea: 5
+[May 30 18:58:01] <+kYx-ng>   Nea: 3
+[May 30 18:58:06] <+kYx-ng> The yeas win!
+[May 30 19:07:26] <+kYx-ng> A poll is being started:
+[May 30 19:07:26] <+kYx-ng>   approve "BYES [<code> [<text>]]"?
+[May 30 19:07:26] <+kYx-ng> Type !yes, !me, !no, or !notme to vote.
+[May 30 19:07:34] <+kYx-ng> Thank you, Ihoss, your vote of YES has been counted.
+[May 30 19:07:35] <+kYx-ng> Thank you, KrazyJim, your vote of YES has been counted.
+[May 30 19:07:38] <+kYx-ng> Thank you, Eko, your vote of YES has been counted.
+[May 30 19:07:38] <+kYx-ng> Thank you, viraptor, your vote of YES has been counted.
+[May 30 19:07:42] <+kYx-ng> Thank you, Tetraboy, your vote of YES has been counted.
+[May 30 19:07:45] <+kYx-ng> Thank you, aarcane, your vote of NO has been counted.
+[May 30 19:07:56] <+kYx-ng> The results are in!
+[May 30 19:07:56] <+kYx-ng>   approve "BYES [<code> [<text>]]"?
+[May 30 19:07:56] <+kYx-ng>   Yea: 5
+[May 30 19:07:56] <+kYx-ng>   Nea: 1
+[May 30 19:07:56] <+kYx-ng> The yeas win by a landslide!
+[May 30 19:13:49] <+kYx-ng> A poll is being started:
+[May 30 19:13:49] <+kYx-ng>   Label required or ignored (but allowed)? Yes for required.
+[May 30 19:13:49] <+kYx-ng> Type !yes, !me, !no, or !notme to vote.
+[May 30 19:13:52] <+kYx-ng> Thank you, Eko, your vote of YES has been counted.
+[May 30 19:13:52] <+kYx-ng> Thank you, KrazyJim, your vote of NO has been counted.
+[May 30 19:13:56] <+kYx-ng> Thank you, viraptor, your vote of YES has been counted.
+[May 30 19:13:57] <+kYx-ng> Thank you, lolcode_com, your vote of YES has been counted.
+[May 30 19:13:59] <+kYx-ng> Thank you, Ihoss, your vote of YES has been counted.
+[May 30 19:14:11] <+kYx-ng> Thank you, viraptor, your vote has been changed to NO.
+[May 30 19:14:18] <+kYx-ng> The results are in!
+[May 30 19:14:18] <+kYx-ng>   Label required or ignored (but allowed)? Yes for required.
+[May 30 19:14:18] <+kYx-ng>   Yea: 3
+[May 30 19:14:18] <+kYx-ng>   Nea: 3
+[May 30 19:14:19] <+kYx-ng> TIE!
+[May 30 19:15:07] <+kYx-ng> A poll is being started:
+[May 30 19:15:07] <+kYx-ng>   Label required or ignored (but allowed)? Yes for required.
+[May 30 19:15:07] <+kYx-ng> Type !yes, !me, !no, or !notme to vote.
+[May 30 19:15:10] <+kYx-ng> Thank you, viraptor, your vote of YES has been counted.
+[May 30 19:15:13] <+kYx-ng> Thank you, lolcode_com, your vote of YES has been counted.
+[May 30 19:15:14] <+kYx-ng> Thank you, KrazyJim, your vote of NO has been counted.
+[May 30 19:15:15] <+kYx-ng> Thank you, johan-s, your vote of NO has been counted.
+[May 30 19:15:16] <+kYx-ng> Thank you, Ihoss, your vote of YES has been counted.
+[May 30 19:15:36] <+kYx-ng> The results are in!
+[May 30 19:15:36] <+kYx-ng>   Label required or ignored (but allowed)? Yes for required.
+[May 30 19:15:36] <+kYx-ng>   Yea: 3
+[May 30 19:15:36] <+kYx-ng>   Nea: 3
+[May 30 19:15:36] <+kYx-ng> TIE!
+[May 30 19:18:57] <+kYx-ng> A poll is being started:
+[May 30 19:18:57] <+kYx-ng>   KTHX terminates all blocks except HAI?
+[May 30 19:18:57] <+kYx-ng> Type !yes, !me, !no, or !notme to vote.
+[May 30 19:19:01] <+kYx-ng> Thank you, Anxiety, your vote of YES has been counted.
+[May 30 19:19:02] <+kYx-ng> Thank you, viraptor, your vote of YES has been counted.
+[May 30 19:19:05] <+kYx-ng> Thank you, Eko, your vote of YES has been counted.
+[May 30 19:19:05] <+kYx-ng> Thank you, aarcane, your vote of YES has been counted.
+[May 30 19:19:05] <+kYx-ng> Thank you, lolcode_com, your vote of YES has been counted.
+[May 30 19:19:08] <+kYx-ng> Thank you, KrazyJim, your vote of YES has been counted.
+[May 30 19:19:13] <+kYx-ng> Thank you, johan-s, your vote of YES has been counted.
+[May 30 19:19:13] <+kYx-ng> Thank you, Ihoss, your vote of YES has been counted.
+[May 30 19:19:57] <+kYx-ng> The results are in!
+[May 30 19:19:57] <+kYx-ng>   KTHX terminates all blocks except HAI?
+[May 30 19:19:57] <+kYx-ng>   Yea: 9
+[May 30 19:19:57] <+kYx-ng>   Nea: 0
+[May 30 19:19:57] <+kYx-ng> The yeas win by a landslide!
+[May 30 19:21:59] <+kYx-ng> A poll is being started:
+[May 30 19:21:59] <+kYx-ng>   KTHX is the universal "closing bracket" line for any if block, looping block, function, etc... except HAI
+[May 30 19:21:59] <+kYx-ng> Type !yes, !me, !no, or !notme to vote.
+[May 30 19:22:02] <+kYx-ng> Thank you, Eko, your vote of YES has been counted.
+[May 30 19:22:04] <+kYx-ng> Thank you, Ihoss, your vote of YES has been counted.
+[May 30 19:22:06] <+kYx-ng> Thank you, aarcane, your vote of YES has been counted.
+[May 30 19:22:07] <+kYx-ng> Thank you, KrazyJim, your vote of NO has been counted.
+[May 30 19:22:09] <+kYx-ng> Thank you, Anxiety, your vote of YES has been counted.
+[May 30 19:22:16] <+kYx-ng> Thank you, johan-s, your vote of YES has been counted.
+[May 30 19:22:19] <+kYx-ng> Thank you, lolcode_com, your vote of YES has been counted.
+[May 30 19:22:29] <+kYx-ng> Thank you, viraptor, your vote of YES has been counted.
+[May 30 19:22:43] <+kYx-ng> The results are in!
+[May 30 19:22:43] <+kYx-ng>   KTHX is the universal "closing bracket" line for any if block, looping block, function, etc... except HAI
+[May 30 19:22:43] <+kYx-ng>   Yea: 9
+[May 30 19:22:43] <+kYx-ng>   Nea: 1
+[May 30 19:22:44] <+kYx-ng> The yeas win by a landslide!
+[May 30 19:26:35] <+kYx-ng> A poll is being started:
+[May 30 19:26:35] <+kYx-ng>   I"M OUTTA YR (!yes) or GTFO (!no)
+[May 30 19:26:35] <+kYx-ng> Type !yes, !me, !no, or !notme to vote.
+[May 30 19:26:38] <+kYx-ng> Thank you, viraptor, your vote of NO has been counted.
+[May 30 19:26:42] <+kYx-ng> Thank you, Eko, your vote of NO has been counted.
+[May 30 19:26:43] <+kYx-ng> Thank you, johan-s, your vote of NO has been counted.
+[May 30 19:26:43] <+kYx-ng> Thank you, aarcane, your vote of YES has been counted.
+[May 30 19:26:45] <+kYx-ng> Thank you, Anxiety, your vote of NO has been counted.
+[May 30 19:26:48] <+kYx-ng> Thank you, KrazyJim, your vote of NO has been counted.
+[May 30 19:26:54] <+kYx-ng> The results are in!
+[May 30 19:26:54] <+kYx-ng>   I"M OUTTA YR (!yes) or GTFO (!no)
+[May 30 19:26:54] <+kYx-ng>   Yea: 2
+[May 30 19:26:54] <+kYx-ng>   Nea: 5
+[May 30 19:26:56] <+kYx-ng> The neas win!
+[May 30 19:28:11] <+kYx-ng> A poll is being started:
+[May 30 19:28:11] <+kYx-ng>   Labels required for loops? (no for ignored but allowed)
+[May 30 19:28:11] <+kYx-ng> Type !yes, !me, !no, or !notme to vote.
+[May 30 19:28:15] <+kYx-ng> Thank you, Ihoss, your vote of NO has been counted.
+[May 30 19:28:16] <+kYx-ng> Thank you, Anxiety, your vote of NO has been counted.
+[May 30 19:28:19] <+kYx-ng> Thank you, KrazyJim, your vote of NO has been counted.
+[May 30 19:28:19] <+kYx-ng> Thank you, Tetraboy, your vote of NO has been counted.
+[May 30 19:28:22] <+kYx-ng> Thank you, aarcane, your vote of YES has been counted.
+[May 30 19:28:24] <+kYx-ng> Thank you, Eko, your vote of NO has been counted.
+[May 30 19:28:27] <+kYx-ng> Thank you, johan-s, your vote of NO has been counted.
+[May 30 19:28:27] <+kYx-ng> Thank you, lolcode_com, your vote of YES has been counted.
+[May 30 19:28:56] <+kYx-ng> The results are in!
+[May 30 19:28:56] <+kYx-ng>   Labels required for loops? (no for ignored but allowed)
+[May 30 19:28:56] <+kYx-ng>   Yea: 2
+[May 30 19:28:56] <+kYx-ng>   Nea: 8
+[May 30 19:28:56] <+kYx-ng> The neas win by a landslide!
+[May 30 19:29:12] <+kYx-ng> A poll is being started:
+[May 30 19:29:12] <+kYx-ng>   should votes be worded more clearly?
+[May 30 19:29:12] <+kYx-ng> Type !yes, !me, !no, or !notme to vote.
+[May 30 19:29:15] <+kYx-ng> Thank you, aarcane, your vote of YES has been counted.
+[May 30 19:29:22] <+kYx-ng> Thank you, johan-s, your vote of YES has been counted.
+[May 30 19:29:24] <+kYx-ng> Thank you, viraptor, your vote of YES has been counted.
+[May 30 19:29:32] <+kYx-ng> Thank you, Anxiety, your vote of NO has been counted.
+[May 30 19:29:33] <+kYx-ng> Thank you, Tetraboy, your vote of YES has been counted.
+[May 30 19:29:36] <+kYx-ng> Thank you, lolcode_com, your vote of YES has been counted.
+[May 30 19:29:42] <+kYx-ng> The results are in!
+[May 30 19:29:42] <+kYx-ng>   should votes be worded more clearly?
+[May 30 19:29:42] <+kYx-ng>   Yea: 6
+[May 30 19:29:42] <+kYx-ng>   Nea: 1
+[May 30 19:29:44] <+kYx-ng> The yeas win by a landslide!
+[May 30 19:34:39] <+kYx-ng> A poll is being started:
+[May 30 19:34:39] <+kYx-ng>   Allow labels? (if not, it'll always be LOOP)
+[May 30 19:34:39] <+kYx-ng> Type !yes, !me, !no, or !notme to vote.
+[May 30 19:34:43] <+kYx-ng> Thank you, Anxiety, your vote of YES has been counted.
+[May 30 19:34:44] <+kYx-ng> Thank you, viraptor, your vote of YES has been counted.
+[May 30 19:34:46] <+kYx-ng> Thank you, Ihoss, your vote of YES has been counted.
+[May 30 19:34:46] <+kYx-ng> Thank you, lolcode_com, your vote of YES has been counted.
+[May 30 19:34:46] <+kYx-ng> Thank you, KrazyJim, your vote of YES has been counted.
+[May 30 19:34:50] <+kYx-ng> Thank you, johan-s, your vote of NO has been counted.
+[May 30 19:34:52] <+kYx-ng> Thank you, Eko, your vote of YES has been counted.
+[May 30 19:34:58] <+kYx-ng> The results are in!
+[May 30 19:35:00] <+kYx-ng>   Allow labels? (if not, it'll always be LOOP)
+[May 30 19:35:02] <+kYx-ng>   Yea: 6
+[May 30 19:35:02] <+kYx-ng>   Nea: 2
+[May 30 19:35:04] <+kYx-ng> The yeas win by a landslide!
+[May 30 19:35:57] <+kYx-ng> A poll is being started:
+[May 30 19:35:57] <+kYx-ng>   Should labels have an effect?
+[May 30 19:35:57] <+kYx-ng> Type !yes, !me, !no, or !notme to vote.
+[May 30 19:36:01] <+kYx-ng> Thank you, viraptor, your vote of YES has been counted.
+[May 30 19:36:01] <+kYx-ng> Thank you, Eko, your vote of NO has been counted.
+[May 30 19:36:05] <+kYx-ng> Thank you, Ihoss, your vote of NO has been counted.
+[May 30 19:36:06] <+kYx-ng> Thank you, lolcode_com, your vote of YES has been counted.
+[May 30 19:36:08] <+kYx-ng> Thank you, johan-s, your vote of NO has been counted.
+[May 30 19:36:09] <+kYx-ng> Thank you, KrazyJim, your vote of NO has been counted.
+[May 30 19:36:13] <+kYx-ng> Thank you, Anxiety, your vote of NO has been counted.
+[May 30 19:36:18] <+kYx-ng> Thank you, Tetraboy, your vote of NO has been counted.
+[May 30 19:36:27] <+kYx-ng> The results are in!
+[May 30 19:36:27] <+kYx-ng>   Should labels have an effect?
+[May 30 19:36:27] <+kYx-ng>   Yea: 3
+[May 30 19:36:27] <+kYx-ng>   Nea: 6
+[May 30 19:36:27] <+kYx-ng> The neas win!
+[May 30 19:38:53] <+kYx-ng> A poll is being started:
+[May 30 19:38:54] <+kYx-ng>   VISIBLE <stuff> prints stuff? yes/no
+[May 30 19:38:54] <+kYx-ng> Type !yes, !me, !no, or !notme to vote.
+[May 30 19:38:57] <+kYx-ng> Thank you, johan-s, your vote of YES has been counted.
+[May 30 19:38:58] <+kYx-ng> Thank you, lolcode_com, your vote of YES has been counted.
+[May 30 19:39:01] <+kYx-ng> Thank you, Anxiety, your vote of NO has been counted.
+[May 30 19:39:01] <+kYx-ng> Thank you, viraptor, your vote of NO has been counted.
+[May 30 19:39:01] <+kYx-ng> Thank you, Eko, your vote of NO has been counted.
+[May 30 19:39:06] <+kYx-ng> Thank you, KrazyJim, your vote of YES has been counted.
+[May 30 19:39:09] <+kYx-ng> Thank you, Ihoss, your vote of NO has been counted.
+[May 30 19:39:09] <+kYx-ng> Thank you, viraptor, your vote has been changed to YES.
+[May 30 19:39:13] <+kYx-ng> The results are in!
+[May 30 19:39:14] <+kYx-ng>   VISIBLE <stuff> prints stuff? yes/no
+[May 30 19:39:17] <+kYx-ng>   Yea: 6
+[May 30 19:39:17] <+kYx-ng>   Nea: 3
+[May 30 19:39:18] <+kYx-ng> The yeas win!
+[May 30 19:44:42] <+kYx-ng> A poll is being started:
+[May 30 19:44:42] <+kYx-ng>   VISIBLE <stuff>[!] prints stuff minimally with a newline (unless there is a !)
+[May 30 19:44:42] <+kYx-ng> Type !yes, !me, !no, or !notme to vote.
+[May 30 19:44:46] <+kYx-ng> Thank you, Eko, your vote of YES has been counted.
+[May 30 19:44:46] <+kYx-ng> Thank you, viraptor, your vote of YES has been counted.
+[May 30 19:44:50] <+kYx-ng> Thank you, Anxiety, your vote of YES has been counted.
+[May 30 19:44:50] <+kYx-ng> Thank you, Ihoss, your vote of YES has been counted.
+[May 30 19:44:50] <+kYx-ng> Thank you, johan-s, your vote of YES has been counted.
+[May 30 19:44:53] <+kYx-ng> Thank you, KrazyJim, your vote of YES has been counted.
+[May 30 19:44:54] <+kYx-ng> Thank you, lolcode_com, your vote of YES has been counted.
+[May 30 19:45:06] <+kYx-ng> Thank you, Jessicatz, your vote of NO has been counted.
+[May 30 19:45:12] <+kYx-ng> The results are in!
+[May 30 19:45:12] <+kYx-ng>   VISIBLE <stuff>[!] prints stuff minimally with a newline (unless there is a !)
+[May 30 19:45:12] <+kYx-ng>   Yea: 7
+[May 30 19:45:12] <+kYx-ng>   Nea: 1
+[May 30 19:45:13] <+kYx-ng> The yeas win by a landslide!
+[May 30 19:47:17] <+kYx-ng> A poll is being started:
+[May 30 19:47:17] <+kYx-ng>   Use "I HAS A" at the beginning of a declaration line?
+[May 30 19:47:17] <+kYx-ng> Type !yes, !me, !no, or !notme to vote.
+[May 30 19:47:23] <+kYx-ng> Thank you, Ihoss, your vote of YES has been counted.
+[May 30 19:47:23] <+kYx-ng> Thank you, Jessicatz, your vote of YES has been counted.
+[May 30 19:47:24] <+kYx-ng> Thank you, Anxiety, your vote of YES has been counted.
+[May 30 19:47:25] <+kYx-ng> Thank you, Eko, your vote of YES has been counted.
+[May 30 19:47:31] <+kYx-ng> Thank you, johan-s, your vote of YES has been counted.
+[May 30 19:47:31] <+kYx-ng> Thank you, KrazyJim, your vote of YES has been counted.
+[May 30 19:47:32] <+kYx-ng> Thank you, lolcode_com, your vote of YES has been counted.
+[May 30 19:47:46] <+kYx-ng> The results are in!
+[May 30 19:47:46] <+kYx-ng>   Use "I HAS A" at the beginning of a declaration line?
+[May 30 19:47:46] <+kYx-ng>   Yea: 8
+[May 30 19:47:46] <+kYx-ng>   Nea: 0
+[May 30 19:47:46] <+kYx-ng> The yeas win by a landslide!
+[May 30 19:54:14] <+kYx-ng> A poll is being started:
+[May 30 19:54:14] <+kYx-ng>   "I HAS A ... " ITZ (yes) or IZ (no)  " ..."
+[May 30 19:54:14] <+kYx-ng> Type !yes, !me, !no, or !notme to vote.
+[May 30 19:54:16] <+kYx-ng> Thank you, johan-s, your vote of YES has been counted.
+[May 30 19:54:16] <+kYx-ng> Thank you, KrazyJim, your vote of YES has been counted.
+[May 30 19:54:22] <+kYx-ng> Thank you, Jessicatz, your vote of YES has been counted.
+[May 30 19:54:22] <+kYx-ng> Thank you, Eko, your vote of YES has been counted.
+[May 30 19:54:22] <+kYx-ng> Thank you, Anxiety, your vote of NO has been counted.
+[May 30 19:54:24] <+kYx-ng> Thank you, lolcode_com, your vote of YES has been counted.
+[May 30 19:54:25] <+kYx-ng> Thank you, Ihoss, your vote of YES has been counted.
+[May 30 19:54:44] <+kYx-ng> The results are in!
+[May 30 19:54:44] <+kYx-ng>   "I HAS A ... " ITZ (yes) or IZ (no)  " ..."
+[May 30 19:54:44] <+kYx-ng>   Yea: 7
+[May 30 19:54:44] <+kYx-ng>   Nea: 1
+[May 30 19:54:44] <+kYx-ng> The yeas win by a landslide!
+[May 30 20:01:10] <+kYx-ng> A poll is being started:
+[May 30 20:01:10] <+kYx-ng>   Is everything an array?
+[May 30 20:01:10] <+kYx-ng> Type !yes, !me, !no, or !notme to vote.
+[May 30 20:01:14] <+kYx-ng> Thank you, Anxiety, your vote of YES has been counted.
+[May 30 20:01:17] <+kYx-ng> Thank you, lolcode_com, your vote of YES has been counted.
+[May 30 20:01:18] <+kYx-ng> Thank you, Ihoss, your vote of YES has been counted.
+[May 30 20:01:18] <+kYx-ng> Thank you, Eko, your vote of YES has been counted.
+[May 30 20:01:18] <+kYx-ng> Thank you, KrazyJim, your vote of NO has been counted.
+[May 30 20:01:21] <+kYx-ng> Thank you, Jessicatz, your vote of YES has been counted.
+[May 30 20:01:40] <+kYx-ng> The results are in!
+[May 30 20:01:40] <+kYx-ng>   Is everything an array?
+[May 30 20:01:40] <+kYx-ng>   Yea: 6
+[May 30 20:01:40] <+kYx-ng>   Nea: 1
+[May 30 20:01:40] <+kYx-ng> The yeas win by a landslide!
+[May 30 20:05:21] <+kYx-ng> A poll is being started:
+[May 30 20:05:21] <+kYx-ng>   Table the ITZ ... portion of the assignment for another meeting (and for wiki suggestions?
+[May 30 20:05:21] <+kYx-ng> Type !yes, !me, !no, or !notme to vote.
+[May 30 20:05:30] <+kYx-ng> Thank you, Ihoss, your vote of YES has been counted.
+[May 30 20:05:33] <+kYx-ng> Thank you, Jessicatz, your vote of YES has been counted.
+[May 30 20:05:35] <+kYx-ng> Thank you, Eko, your vote of YES has been counted.
+[May 30 20:05:38] <+kYx-ng> Thank you, KrazyJim, your vote of YES has been counted.
+[May 30 20:05:39] <+kYx-ng> Thank you, lolcode_com, your vote of YES has been counted.
+[May 30 20:05:51] <+kYx-ng> The results are in!
+[May 30 20:05:51] <+kYx-ng>   Table the ITZ ... portion of the assignment for another meeting (and for wiki suggestions?
+[May 30 20:05:51] <+kYx-ng>   Yea: 6
+[May 30 20:05:51] <+kYx-ng>   Nea: 0
+[May 30 20:05:51] <+kYx-ng> The yeas win by a landslide!
+[May 30 20:14:29] <+kYx-ng> A poll is being started:
+[May 30 20:14:30] <+kYx-ng>   [## IN MAH]* <var> to index?
+[May 30 20:14:30] <+kYx-ng> Type !yes, !me, !no, or !notme to vote.
+[May 30 20:14:35] <+kYx-ng> Thank you, Anxiety, your vote of YES has been counted.
+[May 30 20:14:36] <+kYx-ng> Thank you, Jessicatz, your vote of YES has been counted.
+[May 30 20:14:38] <+kYx-ng> Thank you, Eko, your vote of YES has been counted.
+[May 30 20:14:46] <+kYx-ng> Thank you, KrazyJim, your vote of YES has been counted.
+[May 30 20:14:48] <+kYx-ng> Thank you, lolcode_com, your vote of YES has been counted.
+[May 30 20:14:59] <+kYx-ng> Thank you, Ihoss, your vote of YES has been counted.
+[May 30 20:14:59] <+kYx-ng> The results are in!
+[May 30 20:14:59] <+kYx-ng>   [## IN MAH]* <var> to index?
+[May 30 20:14:59] <+kYx-ng>   Yea: 7
+[May 30 20:14:59] <+kYx-ng>   Nea: 0
+[May 30 20:15:06] <+kYx-ng> The yeas win by a landslide!
+[May 30 20:19:24] <+kYx-ng> A poll is being started:
+[May 30 20:19:24] <+kYx-ng>   Assignment syntax: in "LOL VAR R VAL" should the LOL be optional? (yes or no)
+[May 30 20:19:24] <+kYx-ng> Type !yes, !me, !no, or !notme to vote.
+[May 30 20:19:26] <+kYx-ng> Thank you, Eko, your vote of NO has been counted.
+[May 30 20:19:29] <+kYx-ng> Thank you, Anxiety, your vote of NO has been counted.
+[May 30 20:19:32] <+kYx-ng> Thank you, lolcode_com, your vote of YES has been counted.
+[May 30 20:19:32] <+kYx-ng> Thank you, KrazyJim, your vote of NO has been counted.
+[May 30 20:19:36] <+kYx-ng> Thank you, Jessicatz, your vote of NO has been counted.
+[May 30 20:19:38] <+kYx-ng> Thank you, Ihoss, your vote of NO has been counted.
+[May 30 20:19:43] <+kYx-ng> The results are in!
+[May 30 20:19:43] <+kYx-ng>   Assignment syntax: in "LOL VAR R VAL" should the LOL be optional? (yes or no)
+[May 30 20:19:44] <+kYx-ng>   Yea: 2
+[May 30 20:19:45] <+kYx-ng>   Nea: 5
+[May 30 20:19:46] <+kYx-ng> The neas win!
+[May 30 20:20:04] <+kYx-ng> A poll is being started:
+[May 30 20:20:04] <+kYx-ng>   Ratify as assignment syntax: LOL <var> R <val>
+[May 30 20:20:04] <+kYx-ng> Type !yes, !me, !no, or !notme to vote.
+[May 30 20:20:08] <+kYx-ng> Thank you, pinano, your vote of YES has been counted.
+[May 30 20:20:17] <+kYx-ng> Thank you, Anxiety, your vote of YES has been counted.
+[May 30 20:20:20] <+kYx-ng> Thank you, Eko, your vote of YES has been counted.
+[May 30 20:20:20] <+kYx-ng> Thank you, Ihoss, your vote of YES has been counted.
+[May 30 20:20:23] <+kYx-ng> The results are in!
+[May 30 20:20:23] <+kYx-ng>   Ratify as assignment syntax: LOL <var> R <val>
+[May 30 20:20:25] <+kYx-ng>   Yea: 4
+[May 30 20:20:28] <+kYx-ng>   Nea: 0
+[May 30 20:20:28] <+kYx-ng> The yeas win by a landslide!
+[May 30 20:23:26] <+kYx-ng> A poll is being started:
+[May 30 20:23:26] <+kYx-ng>   IZ <condition> ... whatever we choose for then-else-elseif ... KTHX?
+[May 30 20:23:26] <+kYx-ng> Type !yes, !me, !no, or !notme to vote.
+[May 30 20:23:30] <+kYx-ng> Thank you, Jessicatz, your vote of YES has been counted.
+[May 30 20:23:31] <+kYx-ng> Thank you, Eko, your vote of YES has been counted.
+[May 30 20:23:36] <+kYx-ng> Thank you, lolcode_com, your vote of YES has been counted.
+[May 30 20:23:36] <+kYx-ng> Thank you, pinano, your vote of YES has been counted.
+[May 30 20:23:37] <+kYx-ng> Thank you, Anxiety, your vote of YES has been counted.
+[May 30 20:23:39] <+kYx-ng> Thank you, KrazyJim, your vote of YES has been counted.
+[May 30 20:23:41] <+kYx-ng> Thank you, Ihoss, your vote of YES has been counted.
+[May 30 20:23:56] <+kYx-ng> The results are in!
+[May 30 20:23:56] <+kYx-ng>   IZ <condition> ... whatever we choose for then-else-elseif ... KTHX?
+[May 30 20:23:56] <+kYx-ng>   Yea: 8
+[May 30 20:23:56] <+kYx-ng>   Nea: 0
+[May 30 20:23:56] <+kYx-ng> The yeas win by a landslide!
+[May 30 20:27:19] <+kYx-ng> A poll is being started:
+[May 30 20:27:19] <+kYx-ng>   Should we have a THEN construct?
+[May 30 20:27:19] <+kYx-ng> Type !yes, !me, !no, or !notme to vote.
+[May 30 20:27:21] <+kYx-ng> Thank you, Eko, your vote of NO has been counted.
+[May 30 20:27:22] <+kYx-ng> Thank you, Jessicatz, your vote of YES has been counted.
+[May 30 20:27:27] <+kYx-ng> Thank you, lolcode_com, your vote of YES has been counted.
+[May 30 20:27:27] <+kYx-ng> Thank you, KrazyJim, your vote of NO has been counted.
+[May 30 20:27:27] <+kYx-ng> Thank you, SimonRC, your vote of NO has been counted.
+[May 30 20:27:29] <+kYx-ng> Thank you, Anxiety, your vote of NO has been counted.
+[May 30 20:27:30] <+kYx-ng> Thank you, Ihoss, your vote of YES has been counted.
+[May 30 20:27:35] <+kYx-ng> Thank you, pinano, your vote of YES has been counted.
+[May 30 20:27:39] <+kYx-ng> The results are in!
+[May 30 20:27:39] <+kYx-ng>   Should we have a THEN construct?
+[May 30 20:27:39] <+kYx-ng>   Yea: 4
+[May 30 20:27:39] <+kYx-ng>   Nea: 4
+[May 30 20:27:43] <+kYx-ng> TIE!
+[May 30 20:35:35] <+kYx-ng> A poll is being started:
+[May 30 20:35:35] <+kYx-ng>   Table ELSEIF for later?
+[May 30 20:35:35] <+kYx-ng> Type !yes, !me, !no, or !notme to vote.
+[May 30 20:35:39] <+kYx-ng> Thank you, Eko, your vote of YES has been counted.
+[May 30 20:35:42] <+kYx-ng> Thank you, KrazyJim, your vote of YES has been counted.
+[May 30 20:35:42] <+kYx-ng> Thank you, SimonRC, your vote of YES has been counted.
+[May 30 20:35:42] <+kYx-ng> Thank you, Anxiety, your vote of YES has been counted.
+[May 30 20:35:42] <+kYx-ng> Thank you, pinano, your vote of YES has been counted.
+[May 30 20:35:52] <+kYx-ng> Thank you, Ihoss, your vote of YES has been counted.
+[May 30 20:36:04] <+kYx-ng> The results are in!
+[May 30 20:36:04] <+kYx-ng>   Table ELSEIF for later?
+[May 30 20:36:04] <+kYx-ng>   Yea: 6
+[May 30 20:36:04] <+kYx-ng>   Nea: 0
+[May 30 20:36:04] <+kYx-ng> The yeas win by a landslide!
+[May 30 20:38:46] <+kYx-ng> A poll is being started:
+[May 30 20:38:46] <+kYx-ng>   Is our code broken up by line breaks?
+[May 30 20:38:46] <+kYx-ng> Type !yes, !me, !no, or !notme to vote.
+[May 30 20:38:51] <+kYx-ng> Thank you, Jessicatz, your vote of NO has been counted.
+[May 30 20:38:53] <+kYx-ng> Thank you, pinano, your vote of NO has been counted.
+[May 30 20:38:54] <+kYx-ng> Thank you, Eko, your vote of YES has been counted.
+[May 30 20:38:55] <+kYx-ng> Thank you, lolcode_com, your vote of YES has been counted.
+[May 30 20:38:55] <+kYx-ng> Thank you, Anxiety, your vote of NO has been counted.
+[May 30 20:38:58] <+kYx-ng> Thank you, KrazyJim, your vote of NO has been counted.
+[May 30 20:39:00] <+kYx-ng> Thank you, SimonRC, your vote of YES has been counted.
+[May 30 20:39:02] <+kYx-ng> Thank you, aarcane, your vote of YES has been counted.
+[May 30 20:39:16] <+kYx-ng> The results are in!
+[May 30 20:39:16] <+kYx-ng>   Is our code broken up by line breaks?
+[May 30 20:39:16] <+kYx-ng>   Yea: 4
+[May 30 20:39:16] <+kYx-ng>   Nea: 4
+[May 30 20:39:16] <+kYx-ng> TIE!
+[May 30 20:44:19] <+kYx-ng> A poll is being started:
+[May 30 20:44:19] <+kYx-ng>   Statements are broken up by newlines and/or a period.
+[May 30 20:44:19] <+kYx-ng> Type !yes, !me, !no, or !notme to vote.
+[May 30 20:44:24] <+kYx-ng> Thank you, KrazyJim, your vote of YES has been counted.
+[May 30 20:44:24] <+kYx-ng> Thank you, pinano, your vote of NO has been counted.
+[May 30 20:44:27] <+kYx-ng> Thank you, Eko, your vote of YES has been counted.
+[May 30 20:44:27] <+kYx-ng> Thank you, Jessicatz, your vote of YES has been counted.
+[May 30 20:44:27] <+kYx-ng> Thank you, Anxiety, your vote of YES has been counted.
+[May 30 20:44:31] <+kYx-ng> Thank you, SimonRC, your vote of YES has been counted.
+[May 30 20:44:33] <+kYx-ng> Thank you, lolcode_com, your vote of NO has been counted.
+[May 30 20:45:04] <+kYx-ng> The results are in!
+[May 30 20:45:04] <+kYx-ng>   Statements are broken up by newlines and/or a period.
+[May 30 20:45:04] <+kYx-ng>   Yea: 5
+[May 30 20:45:04] <+kYx-ng>   Nea: 2
+[May 30 20:45:04] <+kYx-ng> The yeas win!
+[May 30 20:51:54] <+kYx-ng> A poll is being started:
+[May 30 20:51:54] <+kYx-ng>   Ratify "IZ <cond> [?] [(.|\n) YARLY] (.|\n) <code> (.|\n) [NOWAI (.|\n) <code>] KTHX"?
+[May 30 20:51:54] <+kYx-ng> Type !yes, !me, !no, or !notme to vote.
+[May 30 20:51:58] <+kYx-ng> Thank you, Eko, your vote of YES has been counted.
+[May 30 20:52:01] <+kYx-ng> Thank you, KrazyJim, your vote of YES has been counted.
+[May 30 20:52:02] <+kYx-ng> Thank you, Jessicatz, your vote of YES has been counted.
+[May 30 20:52:03] <+kYx-ng> Thank you, Anxiety, your vote of YES has been counted.
+[May 30 20:52:06] <+kYx-ng> Thank you, lolcode_com, your vote of NO has been counted.
+[May 30 20:52:11] <+kYx-ng> Thank you, SimonRC, your vote of YES has been counted.
+[May 30 20:52:18] <+kYx-ng> Thank you, pinano, your vote of NO has been counted.
+[May 30 20:52:34] <+kYx-ng> The results are in!
+[May 30 20:52:34] <+kYx-ng>   Ratify "IZ <cond> [?] [(.|\n) YARLY] (.|\n) <code> (.|\n) [NOWAI (.|\n) <code>] KTHX"?
+[May 30 20:52:34] <+kYx-ng>   Yea: 6
+[May 30 20:52:34] <+kYx-ng>   Nea: 2
+[May 30 20:52:34] <+kYx-ng> The yeas win by a landslide!
+[May 30 21:01:14] <+kYx-ng> A poll is being started:
+[May 30 21:01:15] <+kYx-ng>   Should the THAN Be optional?
+[May 30 21:01:15] <+kYx-ng> Type !yes, !me, !no, or !notme to vote.
+[May 30 21:01:16] <+kYx-ng> Thank you, Eko, your vote of NO has been counted.
+[May 30 21:01:22] <+kYx-ng> Thank you, SimonRC, your vote of YES has been counted.
+[May 30 21:01:22] <+kYx-ng> Thank you, Jessicatz, your vote of NO has been counted.
+[May 30 21:01:23] <+kYx-ng> Thank you, pinano, your vote of NO has been counted.
+[May 30 21:01:23] <+kYx-ng> Thank you, Anxiety, your vote of YES has been counted.
+[May 30 21:01:30] <+kYx-ng> Thank you, KrazyJim, your vote of NO has been counted.
+[May 30 21:01:34] <+kYx-ng> The results are in!
+[May 30 21:01:34] <+kYx-ng>   Should the THAN Be optional?
+[May 30 21:01:34] <+kYx-ng>   Yea: 2
+[May 30 21:01:34] <+kYx-ng>   Nea: 4
+[May 30 21:01:38] <+kYx-ng> The neas win!
+[May 30 21:02:53] <+kYx-ng> A poll is being started:
+[May 30 21:02:53] <+kYx-ng>   Comparison operators: [NOT] ((BIGR|SMALR) THAN|LIEK)
+[May 30 21:02:53] <+kYx-ng> Type !yes, !me, !no, or !notme to vote.
+[May 30 21:02:54] <+kYx-ng> Thank you, Jessicatz, your vote of YES has been counted.
+[May 30 21:02:55] <+kYx-ng> Thank you, Eko, your vote of YES has been counted.
+[May 30 21:03:00] <+kYx-ng> Thank you, KrazyJim, your vote of YES has been counted.
+[May 30 21:03:00] <+kYx-ng> Thank you, SimonRC, your vote of YES has been counted.
+[May 30 21:03:00] <+kYx-ng> Thank you, pinano, your vote of YES has been counted.
+[May 30 21:03:02] <+kYx-ng> Thank you, Anxiety, your vote of YES has been counted.
+[May 30 21:03:15] <+kYx-ng> I'm not deaf, pinano
+[May 30 21:03:22] <+kYx-ng> The results are in!
+[May 30 21:03:22] <+kYx-ng>   Comparison operators: [NOT] ((BIGR|SMALR) THAN|LIEK)
+[May 30 21:03:22] <+kYx-ng>   Yea: 6
+[May 30 21:03:22] <+kYx-ng>   Nea: 0
+[May 30 21:03:23] <+kYx-ng> The yeas win by a landslide!
+[May 30 21:05:07] <+kYx-ng> A poll is being started:
+[May 30 21:05:07] <+kYx-ng>   Ratify Bitwise/Logical operators: AND/OR/NOT
+[May 30 21:05:07] <+kYx-ng> Type !yes, !me, !no, or !notme to vote.
+[May 30 21:05:11] <+kYx-ng> Thank you, pinano, your vote of NO has been counted.
+[May 30 21:05:20] <+kYx-ng> Thank you, Eko, your vote of YES has been counted.
+[May 30 21:05:21] <+kYx-ng> Thank you, KrazyJim, your vote of YES has been counted.
+[May 30 21:05:26] <+kYx-ng> Yeah, already got that one, pinano
+[May 30 21:05:28] <+kYx-ng> Thank you, Jessicatz, your vote of YES has been counted.
+[May 30 21:05:29] <+kYx-ng> Thank you, Anxiety, your vote of YES has been counted.
+[May 30 21:05:39] <+kYx-ng> I'm not deaf, Jessicatz
+[May 30 21:05:42] <+kYx-ng> No cheating, Jessicatz
+[May 30 21:05:49] <+kYx-ng> Thank you, SimonRC, your vote of YES has been counted.
+[May 30 21:05:51] <+kYx-ng> The results are in!
+[May 30 21:05:51] <+kYx-ng>   Ratify Bitwise/Logical operators: AND/OR/NOT
+[May 30 21:05:51] <+kYx-ng>   Yea: 5
+[May 30 21:05:51] <+kYx-ng>   Nea: 1
+[May 30 21:05:57] <+kYx-ng> The yeas win by a landslide!
+[May 30 21:06:20] <+kYx-ng> A poll is being started:
+[May 30 21:06:20] <+kYx-ng>   add XOR
+[May 30 21:06:20] <+kYx-ng> Type !yes, !me, !no, or !notme to vote.
+[May 30 21:06:22] <+kYx-ng> Thank you, Eko, your vote of YES has been counted.
+[May 30 21:06:24] <+kYx-ng> Thank you, Anxiety, your vote of YES has been counted.
+[May 30 21:06:27] <+kYx-ng> Thank you, SimonRC, your vote of NO has been counted.
+[May 30 21:06:29] <+kYx-ng> Thank you, pinano, your vote of YES has been counted.
+[May 30 21:06:31] <+kYx-ng> Thank you, KrazyJim, your vote of YES has been counted.
+[May 30 21:06:32] <+kYx-ng> Thank you, Jessicatz, your vote of YES has been counted.
+[May 30 21:06:39] <+kYx-ng> The results are in!
+[May 30 21:06:39] <+kYx-ng>   add XOR
+[May 30 21:06:39] <+kYx-ng>   Yea: 5
+[May 30 21:06:39] <+kYx-ng>   Nea: 1
+[May 30 21:06:40] <+kYx-ng> The yeas win by a landslide!
+[May 30 21:10:15] <+kYx-ng> A poll is being started:
+[May 30 21:10:15] <+kYx-ng>   UP = +, UPZ = +=?
+[May 30 21:10:15] <+kYx-ng> Type !yes, !me, !no, or !notme to vote.
+[May 30 21:10:17] <+kYx-ng> Thank you, Eko, your vote of YES has been counted.
+[May 30 21:10:18] <+kYx-ng> Thank you, Jessicatz, your vote of YES has been counted.
+[May 30 21:10:23] <+kYx-ng> Thank you, SimonRC, your vote of YES has been counted.
+[May 30 21:10:23] <+kYx-ng> Thank you, pinano, your vote of YES has been counted.
+[May 30 21:10:24] <+kYx-ng> Thank you, KrazyJim, your vote of YES has been counted.
+[May 30 21:10:32] <+kYx-ng> Thank you, Anxiety, your vote of YES has been counted.
+[May 30 21:10:45] <+kYx-ng> The results are in!
+[May 30 21:10:45] <+kYx-ng>   UP = +, UPZ = +=?
+[May 30 21:10:45] <+kYx-ng>   Yea: 6
+[May 30 21:10:45] <+kYx-ng>   Nea: 0
+[May 30 21:10:45] <+kYx-ng> The yeas win by a landslide!
+[May 30 21:11:11] <+kYx-ng> A poll is being started:
+[May 30 21:11:11] <+kYx-ng>   NERF = -, NERFZ = -=?
+[May 30 21:11:11] <+kYx-ng> Type !yes, !me, !no, or !notme to vote.
+[May 30 21:11:15] <+kYx-ng> Thank you, Jessicatz, your vote of YES has been counted.
+[May 30 21:11:17] <+kYx-ng> Thank you, Anxiety, your vote of YES has been counted.
+[May 30 21:11:21] <+kYx-ng> Thank you, Eko, your vote of YES has been counted.
+[May 30 21:11:21] <+kYx-ng> Thank you, pinano, your vote of NO has been counted.
+[May 30 21:11:25] <+kYx-ng> Thank you, KrazyJim, your vote of YES has been counted.
+[May 30 21:11:40] <+kYx-ng> The results are in!
+[May 30 21:11:40] <+kYx-ng>   NERF = -, NERFZ = -=?
+[May 30 21:11:40] <+kYx-ng>   Yea: 4
+[May 30 21:11:40] <+kYx-ng>   Nea: 1
+[May 30 21:11:40] <+kYx-ng> The yeas win by a landslide!
+[May 30 21:13:46] <+kYx-ng> A poll is being started:
+[May 30 21:13:46] <+kYx-ng>   TIMEZ = *, TIMEZD = *=
+[May 30 21:13:46] <+kYx-ng> Type !yes, !me, !no, or !notme to vote.
+[May 30 21:13:53] <+kYx-ng> Thank you, Jessicatz, your vote of YES has been counted.
+[May 30 21:13:54] <+kYx-ng> Thank you, SimonRC, your vote of NO has been counted.
+[May 30 21:13:58] <+kYx-ng> Thank you, KrazyJim, your vote of YES has been counted.
+[May 30 21:14:06] <+kYx-ng> Thank you, Anxiety, your vote of NO has been counted.
+[May 30 21:14:15] <+kYx-ng> The results are in!
+[May 30 21:14:15] <+kYx-ng>   TIMEZ = *, TIMEZD = *=
+[May 30 21:14:15] <+kYx-ng>   Yea: 2
+[May 30 21:14:15] <+kYx-ng>   Nea: 2
+[May 30 21:14:15] <+kYx-ng> TIE!
+[May 30 21:15:29] <+kYx-ng> A poll is being started:
+[May 30 21:15:29] <+kYx-ng>   TIEMZ = *, TIEMZD = *=
+[May 30 21:15:29] <+kYx-ng> Type !yes, !me, !no, or !notme to vote.
+[May 30 21:15:33] <+kYx-ng> Thank you, KrazyJim, your vote of YES has been counted.
+[May 30 21:15:35] <+kYx-ng> Thank you, pinano, your vote of YES has been counted.
+[May 30 21:15:43] <+kYx-ng> Thank you, Anxiety, your vote of YES has been counted.
+[May 30 21:15:52] <+kYx-ng> Thank you, SimonRC, your vote of YES has been counted.
+[May 30 21:15:59] <+kYx-ng> The results are in!
+[May 30 21:15:59] <+kYx-ng>   TIEMZ = *, TIEMZD = *=
+[May 30 21:15:59] <+kYx-ng>   Yea: 4
+[May 30 21:15:59] <+kYx-ng>   Nea: 0
+[May 30 21:16:00] <+kYx-ng> The yeas win by a landslide!
+[May 30 21:27:39] <+kYx-ng> A poll is being started:
+[May 30 21:27:39] <+kYx-ng>   OVAR[Z]
+[May 30 21:27:39] <+kYx-ng> Type !yes, !me, !no, or !notme to vote.
+[May 30 21:27:43] <+kYx-ng> Thank you, Eko, your vote of YES has been counted.
+[May 30 21:27:44] <+kYx-ng> Thank you, Anxiety, your vote of YES has been counted.
+[May 30 21:27:46] <+kYx-ng> Thank you, SimonRC, your vote of YES has been counted.
+[May 30 21:27:46] <+kYx-ng> Thank you, Jessicatz, your vote of YES has been counted.
+[May 30 21:27:46] <+kYx-ng> Thank you, KrazyJim, your vote of YES has been counted.
+[May 30 21:27:50] <+kYx-ng> Thank you, aarcane, your vote of YES has been counted.
+[May 30 21:27:56] <+kYx-ng> Thank you, pinano, your vote of YES has been counted.
+[May 30 21:28:08] <+kYx-ng> The results are in!
+[May 30 21:28:08] <+kYx-ng>   OVAR[Z]
+[May 30 21:28:08] <+kYx-ng>   Yea: 7
+[May 30 21:28:08] <+kYx-ng>   Nea: 0
+[May 30 21:28:08] <+kYx-ng> The yeas win by a landslide!
+[May 30 21:28:22] <+kYx-ng> A poll is being started:
+[May 30 21:28:22] <+kYx-ng>   Eko has to do everything
+[May 30 21:28:22] <+kYx-ng> Type !yes, !me, !no, or !notme to vote.
+[May 30 21:28:26] <+kYx-ng> Thank you, Eko, your vote of NO has been counted.
+[May 30 21:28:27] <+kYx-ng> Thank you, Jessicatz, your vote of YES has been counted.
+[May 30 21:28:30] <+kYx-ng> Thank you, Anxiety, your vote of YES has been counted.
+[May 30 21:28:30] <+kYx-ng> Thank you, aarcane, your vote of YES has been counted.
+[May 30 21:28:30] <+kYx-ng> Thank you, pinano, your vote of YES has been counted.
+[May 30 21:28:34] <+kYx-ng> Thank you, KrazyJim, your vote of YES has been counted.
+[May 30 21:28:52] <+kYx-ng> The results are in!
+[May 30 21:28:52] <+kYx-ng>   Eko has to do everything
+[May 30 21:28:52] <+kYx-ng>   Yea: 5
+[May 30 21:28:52] <+kYx-ng>   Nea: 1
+[May 30 21:28:54] <+kYx-ng> The yeas win by a landslide!
+[May 30 21:29:00] <+kYx-ng> A poll is being started:
+[May 30 21:29:00] <+kYx-ng>   Integer math for v1.0
+[May 30 21:29:00] <+kYx-ng> Type !yes, !me, !no, or !notme to vote.
+[May 30 21:29:00] <+kYx-ng> Thank you, Jessicatz, your vote of YES has been counted.
+[May 30 21:29:02] <+kYx-ng> Thank you, Anxiety, your vote of YES has been counted.
+[May 30 21:29:08] <+kYx-ng> Thank you, KrazyJim, your vote of YES has been counted.
+[May 30 21:29:08] <+kYx-ng> Thank you, Eko, your vote of YES has been counted.
+[May 30 21:29:08] <+kYx-ng> Thank you, pinano, your vote of YES has been counted.
+[May 30 21:29:09] <+kYx-ng> Thank you, aarcane, your vote of NO has been counted.
+[May 30 21:29:18] <+kYx-ng> Thank you, SimonRC, your vote of YES has been counted.
+[May 30 21:29:30] <+kYx-ng> The results are in!
+[May 30 21:29:30] <+kYx-ng>   Integer math for v1.0
+[May 30 21:29:30] <+kYx-ng>   Yea: 6
+[May 30 21:29:30] <+kYx-ng>   Nea: 1
+[May 30 21:29:30] <+kYx-ng> The yeas win by a landslide!
+[May 30 21:29:43] <+kYx-ng> A poll is being started:
+[May 30 21:29:43] <+kYx-ng>   Meeting adjournment
+[May 30 21:29:43] <+kYx-ng> Type !yes, !me, !no, or !notme to vote.
+[May 30 21:29:47] <+kYx-ng> Thank you, Eko, your vote of YES has been counted.
+[May 30 21:29:56] <+kYx-ng> Thank you, KrazyJim, your vote of YES has been counted.
+[May 30 21:29:56] <+kYx-ng> Thank you, pinano, your vote of NO has been counted.
+[May 30 21:30:12] <+kYx-ng> Thank you, SimonRC, your vote of YES has been counted.
+[May 30 21:30:17] <+kYx-ng> Thank you, Jessicatz, your vote of YES has been counted.
+[May 30 21:30:27] <+kYx-ng> The results are in!
+[May 30 21:30:27] <+kYx-ng>   Meeting adjournment
+[May 30 21:30:27] <+kYx-ng>   Yea: 4
+[May 30 21:30:27] <+kYx-ng>   Nea: 1
+[May 30 21:30:27] <+kYx-ng> The yeas win by a landslide!
