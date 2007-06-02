@@ -5,6 +5,8 @@
 #include <malloc.h>
 #include "grammar.tab.h"
 
+unsigned long curline = 1;
+
 char *string_buf = NULL;
 unsigned long strsize = 0;
 
@@ -41,6 +43,7 @@ BTW.*$                  { return COMMENT; }
                     }
 
   \n                {
+                      ++curline;
                       /* error - unterminated string constant */
                       /* generate error message */
                       str_err("Unterminated string constant - \\ needed?");
@@ -122,6 +125,6 @@ BTW.*$                  { return COMMENT; }
 \?                      { return P_QMARK; }
 \!                      { return P_EXCL; }
 [A-Za-z]+               { yylval.str = strdup(yytext); return T_WORD; }
-[.\n]                   { return NEWLINE; }
+[.\n]                   { if (*yytext == '\n') ++curline; yylval.ulong=curline; return NEWLINE; }
 [\t ]+                  { /* Ignore whitespace */; }
 %%

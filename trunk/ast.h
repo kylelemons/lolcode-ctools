@@ -12,17 +12,18 @@ typedef struct ast_node_t {
   unsigned char terminal; // boolean (1/0)
   unsigned type;
   unsigned nodecount;
+  unsigned long lineno;
   void **nodes;
 } ast_node;
 
-extern unsigned type_count;
 extern const char * const * type_names;
+extern unsigned type_count;
 
 #ifdef __cplusplus
 extern "C" {
 #endif
 
-ast_node *create_ast_node(unsigned t, unsigned char term);
+ast_node *create_ast_node(unsigned t, unsigned l, unsigned char term);
 
 void append_leaf(ast_node *node, void *leaf);
 
@@ -36,8 +37,8 @@ ast_node *generate_ast();
 #endif
 
 // defines to make this all shorter
-#define CN(x) create_ast_node(x,0)
-#define CT(x) create_ast_node(x,1);
+#define CN(x,l) create_ast_node(x,l,0)
+#define CT(x,l) create_ast_node(x,l,1);
 #define AL(x,y) append_leaf(x,y)
 #define ALL(x,y,z) AL(x,y),AL(x,z)
 #define ALLL(x,y,z,w) ALL(x,y,z),AL(x,w)
