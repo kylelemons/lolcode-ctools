@@ -55,14 +55,16 @@ void *idup(int x)
 %left TIEMZ OVAR
 %left IN_MAH
 
-%type <node> array array_expr array_index assignment condexpr conditional
+%type <node> word string number
+
+%type <node> array array_index assignment brk comment condexpr conditional
 %type <node> declaration exit exit_status exit_message expr 
-%type <node> include increment_expr initializer input_type input_from input 
-%type <node> l_value loop loop_label output program
+%type <node> include increment_expr index_expr initializer input_type input_from input 
+%type <node> l_value loop output program
 %type <node> self_assignment stmt stmts
 %type <ulong> prog_start prog_end
 
-%expect 78
+%expect 74
 
 %start program
 
@@ -71,18 +73,24 @@ program : prog_start stmts prog_end { $$ = CN(TN,$1); AL($$,$2); root = $$; }
 ;
 
 array : array_index array  { $$ = CN(TN,LN); ALL($$,$1,$2); } 
-      | T_WORD             { $$ = CT(TN,LN); AL($$,$1); }
+      | word               { $$ = CT(TN,LN); AL($$,$1); }
 ;
 
 /*TODO: Figure out how to allow an expr as the index... */
+array_index : index_expr IN_MAH  { $$ = CN(TN,LN); AL($$,$1); }
 /*
-array_index : expr IN_MAH  { $$ = CN(TN,LN); AL($$,$1); }
-*/
 array_index : T_NUMBER IN_MAH { $$ = CT(TN,LN); AL($$,idup($1)); }
             | T_WORD IN_MAH { $$ = CT(TN,LN); AL($$,$1); }
 ;
+*/
 
 assignment : LOL l_value R expr     { $$ = CN(TN,LN); ALL($$,$2,$4); }
+;
+
+brk : GTFO { $$ = CT(TN,LN); }
+;
+
+comment : COMMENT { $$ = CT(TN,LN); }
 ;
 
 condexpr : WIN                      { int b = 1; $$ = CT(TN,LN); AL($$,idup(b)); }
@@ -117,33 +125,38 @@ exit : DIAF exit_status exit_message     { $$ = CN(TN,LN); ALL($$,$2,$3); }
 ;
 
 exit_status : /* nothing */ { $$ = CT(TN,LN); }
-            | T_NUMBER      { $$ = CT(TN,LN); AL($$,idup($1)); }
-            | T_WORD        { $$ = CT(TN,LN); AL($$,$1); }
+            | number        { $$ = CT(TN,LN); AL($$,$1); }
+            | word          { $$ = CT(TN,LN); AL($$,$1); }
 ;
 
 exit_message : /* nothing */ { $$ = CT(TN,LN); }
-             | T_STRING      { $$ = CT(TN,LN); AL($$,$1); }
-             | T_WORD        { $$ = CT(TN,LN); AL($$,$1); }
+             | string        { $$ = CT(TN,LN); AL($$,$1); }
+             | word          { $$ = CT(TN,LN); AL($$,$1); }
 ;
 
+/*
 array_expr : array              { $$ = CN(TN,LN); AL($$,$1); }
            | array UP expr      { $$ = CN(TN,LN); ALL($$,$1,$3); }
            | array NERF expr    { $$ = CN(TN,LN); ALL($$,$1,$3); }
            | array TIEMZ expr   { $$ = CN(TN,LN); ALL($$,$1,$3); }
            | array OVAR expr    { $$ = CN(TN,LN); ALL($$,$1,$3); }
 ;
+*/
 
-expr : T_NUMBER          { $$ = CT(TN,LN); AL($$,idup($1)); }
-     | T_STRING          { $$ = CT(TN,LN); AL($$,$1); }
-     | expr UP expr      { $$ = CN(TN,LN); ALL($$,$1,$3); }
-     | expr NERF expr    { $$ = CN(TN,LN); ALL($$,$1,$3); }
-     | expr TIEMZ expr   { $$ = CN(TN,LN); ALL($$,$1,$3); }
-     | expr OVAR expr    { $$ = CN(TN,LN); ALL($$,$1,$3); }
-     | array_expr        { $$ = CN(TN,LN); AL($$,$1); }
+index_expr : word                          { $$ = CN(TN,LN); AL($$,$1); }
+           | number                        { $$ = CN(TN,LN); AL($$,$1); }
+           | index_expr UP index_expr      { $$ = CN(TN,LN); ALL($$,$1,$3); }
+           | index_expr NERF index_expr    { $$ = CN(TN,LN); ALL($$,$1,$3); }
+           | index_expr TIEMZ index_expr   { $$ = CN(TN,LN); ALL($$,$1,$3); }
+           | index_expr OVAR index_expr    { $$ = CN(TN,LN); ALL($$,$1,$3); }
 ;
 
-include : CAN_HAS T_WORD P_QMARK   { $$ = CT(TN,LN); AL($$,$2); }
-        | CAN_HAS T_STRING P_QMARK { $$ = CT(TN,LN); AL($$,$2); }
+expr : string            { $$ = CN(TN,LN); AL($$,$1); }
+     | index_expr        { $$ = CN(TN,LN); AL($$,$1); }
+;
+
+include : CAN_HAS word P_QMARK   { $$ = CN(TN,LN); AL($$,$2); }
+        | CAN_HAS string P_QMARK { $$ = CN(TN,LN); AL($$,$2); }
 
 increment_expr : /* empty (defaults to 1) */     { $$ = CT(TN,LN); }
                | expr     { $$ = CN(TN,LN); AL($$,$1); }
@@ -159,8 +172,8 @@ input_type : /* empty */      { $$ = CT(TN,LN); }
            | LETTAR     { $$ = CT(TN,LN); }
 ;
 
-input_from : /* empty */      { $$ = CT(TN,LN); }
-           | OUTTA T_WORD     { $$ = CT(TN,LN); AL($$,$2); }
+input_from : /* empty */     { $$ = CT(TN,LN); }
+           | OUTTA word      { $$ = $2; }
            | OUTTA STDIN     { $$ = CT(TN,LN); }
 ;
 
@@ -170,11 +183,10 @@ input : GIMMEH input_type array input_from { $$ = CN(TN,LN); ALLL($$,$2,$3,$4); 
 l_value : array     { $$ = CN(TN,LN); AL($$,$1); }
 ;
 
-loop : IM_IN_YR loop_label end_stmt stmts KTHX     { $$ = CN(TN,$1); ALL($$,$2,$4); }
+loop : IM_IN_YR word end_stmt stmts KTHX     { $$ = CN(TN,$1); ALL($$,$2,$4); }
 ;
 
-loop_label : T_WORD  { $$ = CT(TN,LN); AL($$,$1); }
-;
+number : T_NUMBER         { $$ = CT(TN,LN); AL($$,idup($1)); }
 
 output : VISIBLE expr     { $$ = CT(TN,LN); AL($$,$2); }
        | VISIBLE expr P_EXCL     { $$ = CT(TN,LN); AL($$,$2); }
@@ -193,18 +205,18 @@ self_assignment : UPZ l_value P_EXCL P_EXCL increment_expr     { $$ = CN(TN,LN);
                 | OVARZ l_value P_EXCL P_EXCL increment_expr     { $$ = CN(TN,LN); ALL($$,$2,$5); }
 ;
 
-stmt : include               { $$ = CN(TN,LN); AL($$,$1); }
-     | declaration           { $$ = CN(TN,LN); AL($$,$1); }
-     | loop                  { $$ = CN(TN,LN); AL($$,$1); }
-     | conditional           { $$ = CN(TN,LN); AL($$,$1); }
-     | assignment            { $$ = CN(TN,LN); AL($$,$1); }
-     | self_assignment       { $$ = CN(TN,LN); }
-     | input                 { $$ = CN(TN,LN); AL($$,$1); }
-     | output                { $$ = CN(TN,LN); AL($$,$1); }
-     | expr                  { $$ = CN(TN,LN); AL($$,$1); }
-     | GTFO                  { $$ = CT(TN,LN); }
-     | exit                  { $$ = CN(TN,LN); AL($$,$1); }
-     | COMMENT               { $$ = CT(TN,LN); }
+stmt : include               { $$ = $1; }
+     | declaration           { $$ = $1; }
+     | loop                  { $$ = $1; }
+     | conditional           { $$ = $1; }
+     | assignment            { $$ = $1; }
+     | self_assignment       { $$ = $1; }
+     | input                 { $$ = $1; }
+     | output                { $$ = $1; }
+     | expr                  { $$ = $1; }
+     | brk                   { $$ = $1; }
+     | exit                  { $$ = $1; }
+     | comment               { $$ = $1; }
 ;
 
 stmts : /* No statements at all */     { $$ = CT(TN,LN); }
@@ -213,11 +225,15 @@ stmts : /* No statements at all */     { $$ = CT(TN,LN); }
       | stmts stmt end_stmt      { $$ = CN(TN,LN); ALL($$,$1,$2); }
 ;
 
+string : T_STRING { $$ = CT(TN,LN); AL($$,$1); }
+
 then : end_stmt
      | P_QMARK end_stmt
      | end_stmt YARLY
      | P_QMARK end_stmt YARLY
 ;
+
+word : T_WORD    { $$ = CT(TN,LN); AL($$,$1); }
 
 %%
 void yyerror(const char *str)
