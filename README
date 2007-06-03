@@ -21,7 +21,7 @@ LOLCODE Recommendation v1.0 + modifications
     - label has no effect
   - VISIBLE <stuff>[!]
     - prints stuff as minimally as possible and with a newline (unless !)
-  - I HAS A <l_value> ITZ <expr>
+  - I HAS A <l_value> [ITZ <expr>]
     Declare a variable.  Auto-recognize the type among:
     - NUMBAR (integer, currently)
     - YARN (string)
