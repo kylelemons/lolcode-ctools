@@ -8,7 +8,8 @@ Meeting agenda for LOLCODE v1.1
      schedule.
   b. The channel will be moderated.  Only users with voices or op may speak.
   c. Only users who are developing an interpreter or compiler for LOLCODE may
-     be given voice privileges.  These people are the ones to whom suggestions
+     be given voice privileges.  Should the channel moderation need to be
+     enforced (only if needed), These people are the ones to whom suggestions
      by bystanders (non-voiced users) should be directed, and they should
      weigh the suggestion for its merits (not for its opinion) and paste it
      verbatim in-channel if deemed relevant.
