@@ -73,6 +73,7 @@ Meeting agenda for LOLCODE v1.1
           RPN seems well suited to the language.
         - If no RPN, what is LOLCode's order of evaluation? As per C, or something else?
         - If no RPN, do we need a grouping operator?
+        - If no RPN, can PRON be a statement signifying RPN follows?
     iix. Variable Typing
         - Introduce strongly typed variables?
           - Required or optional?
@@ -104,3 +105,6 @@ Meeting agenda for LOLCODE v1.1
     xvii.Is there a way to unset a value in an array? By setting it to null?
     xiix.'else if' syntax?
     xix. Switch statement?
+    xx.  What characters are allowed in identifiers?
+    xxi. Deprecate DIAF in favor of BYES?
+    xxii.Variable scoping rules
