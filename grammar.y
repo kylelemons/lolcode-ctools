@@ -168,10 +168,10 @@ index_expr : word                          { $$ = CN(TN,LN); AL($$,$1); }
 expr : string            { $$ = $1; }
      | number            { $$ = $1; }
      | array             { $$ = $1; }
-     | PLUS expr argsep expr    { $$ = CN(TN,LN); ALLL($$,$2,cdup('+'),$4); }
-     | MINUS expr argsep expr   { $$ = CN(TN,LN); ALLL($$,$2,cdup('-'),$4); }
-     | MULT expr argsep expr    { $$ = CN(TN,LN); ALLL($$,$2,cdup('*'),$4); }
-     | DIV expr argsep expr     { $$ = CN(TN,LN); ALLL($$,$2,cdup('/'),$4); }
+     | PLUS expr argsep expr    { $$ = CN(TN,LN); ALLL($$,cdup('+'),$2,$4); }
+     | MINUS expr argsep expr   { $$ = CN(TN,LN); ALLL($$,cdup('-'),$2,$4); }
+     | MULT expr argsep expr    { $$ = CN(TN,LN); ALLL($$,cdup('*'),$2,$4); }
+     | DIV expr argsep expr     { $$ = CN(TN,LN); ALLL($$,cdup('/'),$2,$4); }
 ;
 
 include : INCLUDE word P_QMARK   { $$ = CN(TN,LN); AL($$,$2); }
@@ -215,10 +215,10 @@ prog_end   : KTHXBYE { $$ = $1 }
            | prog_end end_stmt { $$ = $1 }
 ;
 
-self_assignment : PLUSEQ array P_EXCL P_EXCL increment_expr     { $$ = CN(TN,LN); ALL($$,$2,$5); }
-                | MINUSEQ array P_EXCL P_EXCL increment_expr     { $$ = CN(TN,LN); ALL($$,$2,$5); }
-                | MULTEQ array P_EXCL P_EXCL increment_expr     { $$ = CN(TN,LN); ALL($$,$2,$5); }
-                | DIVEQ array P_EXCL P_EXCL increment_expr     { $$ = CN(TN,LN); ALL($$,$2,$5); }
+self_assignment : PLUSEQ array P_EXCL P_EXCL increment_expr    { $$ = CN(TN,LN); ALLL($$,cdup('+'),$2,$5); }
+                | MINUSEQ array P_EXCL P_EXCL increment_expr   { $$ = CN(TN,LN); ALLL($$,cdup('-'),$2,$5); }
+                | MULTEQ array P_EXCL P_EXCL increment_expr    { $$ = CN(TN,LN); ALLL($$,cdup('*'),$2,$5); }
+                | DIVEQ array P_EXCL P_EXCL increment_expr     { $$ = CN(TN,LN); ALLL($$,cdup('/'),$2,$5); }
 ;
 
 stmt : include               { $$ = $1; }
@@ -265,7 +265,7 @@ int yywrap()
 ast_node *generate_ast()
 {
   type_names = yytname;
-  type_count = YYNRULES;
+  type_count = YYNTOKENS+YYNNTS;
 
   root = NULL;
 
