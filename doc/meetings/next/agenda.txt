@@ -1,5 +1,3 @@
-Agenda format and contents borrowed from Eko.
-
 Meeting agenda for LOLCODE v1.1
   Re: LOLCODE Developer Standardization Meeting
 
