@@ -19,7 +19,7 @@ CANON
     - label has no effect
   - VISIBLE <stuff>[!]
     - prints stuff as minimally as possible and with a newline (unless !)
-  - I HAS A <l_value> ITZ ...
+  - I HAS A <l_value> [ITZ ...]
     - Everything is an array.  muahahahaha.
     - By default, the variable has one element
     - ITZ ... has been tabled for future usage
