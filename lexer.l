@@ -27,7 +27,7 @@ void str_app(char ch)
 %x strstate
 
 %%
-BTW.*$                  { yylval.ulong=curline; return COMMENT; }
+BTW.*$                  { return COMMENT; }
 [0-9]+                  { yylval.num = atoi(yytext); return T_NUMBER; }
 \"                      { string_buf=NULL; strsize=0; BEGIN(strstate); }
 
@@ -84,50 +84,46 @@ BTW.*$                  { yylval.ulong=curline; return COMMENT; }
                     }
 }
 
-"AN"                     { yylval.ulong=curline; return ARGSEP; }
-"AND"                    { yylval.ulong=curline; return AND; }
-"BIGR"                   { yylval.ulong=curline; return GREATER; }
-"BYES"                   { yylval.ulong=curline; return BYES; }
-"CAN HAS"                { yylval.ulong=curline; return INCLUDE; }
-"DEN"                    { yylval.ulong=curline; return ARGSEP; }
-"DIAF"                   { yylval.ulong=curline; return DIAF; }
-"FAIL"                   { yylval.ulong=curline; return FAIL; }
-"GIMMEH"                 { yylval.ulong=curline; return GIMMEH; }
-"GTFO"                   { yylval.ulong=curline; return GTFO; }
-"HAI"                    { yylval.ulong=curline; return HAI; }
-"I HAS A"                { yylval.ulong=curline; return DECLARE; }
-"IM IN YR"               { yylval.ulong=curline; return INFLOOP; }
-"MAH"                    { yylval.ulong=curline; return ARR; }
-"ITZ"                    { yylval.ulong=curline; return ITZ; }
-"IZ"                     { yylval.ulong=curline; return IZ; }
-"KTHX"                   { yylval.ulong=curline; return KTHX; }
-"KTHXBYE"                { yylval.ulong=curline; return KTHXBYE; }
-"LETTAR"                 { yylval.ulong=curline; return LETTAR; }
-"LIEK"                   { yylval.ulong=curline; return EQUALTO; }
-"LINE"                   { yylval.ulong=curline; return LINE; }
-"LOL"                    { yylval.ulong=curline; return LOL; }
-"NERF"                   { yylval.ulong=curline; return MINUS; }
-"NERFZ"                  { yylval.ulong=curline; return MINUSEQ; }
-"NOT"                    { yylval.ulong=curline; return NOT; }
-"NOWAI"                  { yylval.ulong=curline; return NOWAI; }
-"OR"                     { yylval.ulong=curline; return OR; }
-"OUTTA"                  { yylval.ulong=curline; return OUTTA; }
-"OVAR"                   { yylval.ulong=curline; return DIV; }
-"OVARZ"                  { yylval.ulong=curline; return DIVEQ; }
-"R"                      { yylval.ulong=curline; return R; }
-"SMALR"                  { yylval.ulong=curline; return INCLUDE; }
-"STDIN"                  { yylval.ulong=curline; return STDIN; }
-"TIEMZ"                  { yylval.ulong=curline; return MULT; }
-"TIEMZD"                 { yylval.ulong=curline; return MULTEQ; }
-"UP"                     { yylval.ulong=curline; return PLUS; }
-"UPZ"                    { yylval.ulong=curline; return PLUSEQ; }
-"VISIBLE"                { yylval.ulong=curline; return PRINT; }
-"WIN"                    { yylval.ulong=curline; return WIN; }
-"WORD"                   { yylval.ulong=curline; return WORD; }
-"XOR"                    { yylval.ulong=curline; return XOR; }
-"YARLY"                  { yylval.ulong=curline; return YARLY; }
-\?                      { yylval.ulong=curline; return P_QMARK; }
-\!                      { yylval.ulong=curline; return P_EXCL; }
+"AND"                    { return AND; }
+"BIGR THAN"              { return BIGR_THAN; }
+"BYES"                   { return BYES; }
+"CAN HAS"                { return CAN_HAS; }
+"DIAF"                   { return DIAF; }
+"GIMMEH"                 { return GIMMEH; }
+"GTFO"                   { return GTFO; }
+"HAI"                    { return HAI; }
+"I HAS A"                { return I_HAS_A; }
+"IM IN YR"               { return IM_IN_YR; }
+"IN MAH"                 { return IN_MAH; }
+"ITZ"                    { return ITZ; }
+"IZ"                     { return IZ; }
+"KTHX"                   { return KTHX; }
+"KTHXBYE"                { return KTHXBYE; }
+"LETTAR"                 { return LETTAR; }
+"LIEK"                   { return LIEK; }
+"LINE"                   { return LINE; }
+"LOL"                    { return LOL; }
+"NERF"                   { return NERF; }
+"NERFZ"                  { return NERFZ; }
+"NOT"                    { return NOT; }
+"NOWAI"                  { return NOWAI; }
+"OR"                     { return OR; }
+"OUTTA"                  { return OUTTA; }
+"OVAR"                   { return OVAR; }
+"OVARZ"                  { return OVARZ; }
+"R"                      { return R; }
+"SMALR THAN"             { return SMALR_THAN; }
+"STDIN"                  { return STDIN; }
+"TIEMZ"                  { return TIEMZ; }
+"TIEMZD"                 { return TIEMZD; }
+"UP"                     { return UP; }
+"UPZ"                    { return UPZ; }
+"VISIBLE"                { return VISIBLE; }
+"WORD"                   { return WORD; }
+"XOR"                    { return XOR; }
+"YARLY"                  { return YARLY; }
+\?                      { return P_QMARK; }
+\!                      { return P_EXCL; }
 [A-Za-z]+               { yylval.str = strdup(yytext); return T_WORD; }
 [.\n]                   { if (*yytext == '\n') ++curline; yylval.ulong=curline; return NEWLINE; }
 [\t ]+                  { /* Ignore whitespace */; }

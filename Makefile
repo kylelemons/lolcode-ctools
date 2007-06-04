@@ -20,37 +20,28 @@ BIS_SOURCE_OUT=${BIS_PREFIX}.c
 BIS_HEADER_OUT=${BIS_PREFIX}.h
 BIS_SOURCE_OBJ=${BIS_PREFIX}.o
 
-MY_OBJ=ast.o lcc.o lolcode.o
+MY_OBJ=ast.o parser.o
 
-all : lcc
+all : parser
 
-lcc : ${LEX_SOURCE_OBJ} ${BIS_SOURCE_OBJ} ${MY_OBJ}
-	${LINK} $@ ${LEX_SOURCE_OBJ} ${BIS_SOURCE_OBJ} ${MY_OBJ}
+parser : ${LEX_SOURCE_OBJ} ${BIS_SOURCE_OBJ} ${MY_OBJ}
+	${LINK} parser ${LEX_SOURCE_OBJ} ${BIS_SOURCE_OBJ} ${MY_OBJ}
 
 ${LEX_SOURCE_OBJ} : ${LEX_SOURCE_OUT}
 
-${LEX_SOURCE_OUT} : lexer.l grammar.y ${BIS_HEADER_OUT}
+${LEX_SOURCE_OUT} : lexer.l ${BIS_HEADER_OUT}
 	${LEX} -o ${LEX_SOURCE_OUT} $<
 
 ${BIS_SOURCE_OBJ} : ${BIS_SOURCE_OUT}
 
 ${BIS_HEADER_OUT} : ${BIS_SOURCE_OUT}
 
-${BIS_SOURCE_OUT} : grammar.y lexer.l
+${BIS_SOURCE_OUT} : grammar.y
 	${BISON} -o ${BIS_SOURCE_OUT} --defines=${BIS_HEADER_OUT} $<
-
-lcc.o : lcc.cpp lolcode.hpp ast.h
-
-lolcode.o : lolcode.cpp lolcode.hpp ast.h
 
 clean :
 	@echo "  CLEAN"
-	rm .o lcc
-	rm *.yy.* *.tab.* grammar.output 
-	rm -rf help/
-
-doc : doxygen.conf
-	doxygen doxygen.conf
+	rm *.o *.yy.* *.tab.* grammar.output parser
 
 %.o : %.c %.h
 	@echo "  CC [h]  $@"
@@ -60,7 +51,7 @@ doc : doxygen.conf
 	@echo "  CC      $@"
 	${CCOMPILE} $<
 
-%.o : %.cpp %.hpp
+%.o : %.cpp %.h
 	@echo "  CPP [h] $@"
 	${CPPCOMPILE} $<
 
