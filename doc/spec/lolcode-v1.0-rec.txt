@@ -21,6 +21,8 @@ CANON
     - prints stuff as minimally as possible and with a newline (unless !)
   - I HAS A <l_value> [ITZ ...]
     - Everything is an array.  muahahahaha.
+      - To clarify, every VARIABLE is an array, and it knows its own
+        dimensions.
     - By default, the variable has one element
     - ITZ ... has been tabled for future usage
   - [## IN MAH]* <var>
@@ -28,6 +30,10 @@ CANON
       as a whole.
     - Multiple occurences of this index sub-levels of the array.
       - 1 IN MAH 2 IN MAH arr <=> arr[2][1]
+        - IN MAH clarifies the dimension of the array itself, it is not meant
+          to "return" a smaller array.  So, 0 IN MAH 0 IN MAH VAR must only be
+          used in a two-dimensional array, just like **arr should only be used
+          in a 2-D array in C.
     - Does NOT expand the size of the array (except as l_value of assignment)
       - Throws error/dies on out of bounds?
   - LOL <var> R <val>
