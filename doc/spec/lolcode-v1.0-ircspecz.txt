@@ -36,3 +36,71 @@ IRCSPEC version numbers: Roman numeral style
 	- X = 5
 	- C = 10
 	- V = 50
+
+The following are comments from Arachnid on the forum:
+
+  These are a series of extensions to the 1.0 reccommendation. They're entirely
+  backward compatible, and entirely unofficial. Nobody is required to implement 
+  these by any stretch of the implementation, but we got tired of waiting. We 
+  tried to take only the least controversial proposed extensions and integrate 
+  them with the existing language. We naturally hope that this is what (part 
+  of) 1.1 will look like, but if it doesn't, we'll update accordingly. 
+
+  Herein the proposals:
+
+  "HAI" is now defined as "HAI [(TO|2) <version>]". Version is alphanumeric. The
+  1.0 reccommendation is "1.0" and this unofficial spec is "IRCSPECZ". If a
+  compiler encounters a "HAI" with no version, it should attempt to compile it
+  using the most recent/complete spec it knows. If it encounters a version it is
+  familiar with, it should attempt to compile it as that version. If it
+  encounters a version it is not familiar with, it should return an error and
+  exit.
+
+  "IZ" now permits any number of "MEBBE [IZ] <condition>" blocks, each
+  introducing an 'else if' block. These come after the 'YARLY' block and before
+  the 'NOWAI' block.
+
+  The "YR" and "UR" keywords are treated as synonyms (they're used
+  interchangeably by many people).
+
+  GTFO is deprecated. (It was never actually in 1.0, but it's commonly used as
+  if it is)
+
+  ENUF is introduced, serving the same purpose as GTFO. It can optionally take
+  the name of the loop to exit: "ENUF [[OV [YR|UR]] <loopname> ]".
+
+  MOAR is introduced, serving as a 'continue' statement. It optionally takes the
+  name of the loop to exit, with the same syntax as ENUF.
+
+  A switch statement is introduced. This takes the form:
+  Code:
+
+  WTF [IZ] <condition>?
+    { OMG <literal> [!]
+      <statements>}
+    [ OMGWTF [?]
+      <statements> ]
+  KTHX
+
+  Execution implicitly falls through from one "OMG" to the next until it
+  hits an "ENUF", at which point it exits the switch statement. However,
+  if a non-empty "OMG" block has no "ENUF" statement at the end, the
+  compiler/interpreter should emit a warning to that effect.
+
+  BTW is 'officially' the comment keyword (in this unofficial spec).
+
+  "KTHX" to terminate loops is deprecated in favor of the old (and more
+  flavorsome) "IM OUTTA YR <loop>".
+
+  "DIAF" is deprecated in favor of "BYES".
+
+  ---
+
+  Comments are welcome. Once again, this isn't supposed to serve as an
+  official spec, but as something unofficial with the less controversial
+  extensions so that we implementors have something to be getting on
+  with.
+
+  Signed,
+
+  Arachnid,
