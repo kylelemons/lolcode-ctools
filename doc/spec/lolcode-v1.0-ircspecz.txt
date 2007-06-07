@@ -1,0 +1,38 @@
+The following has been UNOFFICIALLY proposed as an extension to lolcode-v1.0-rec
+
+CAN HAS <module/"file">?
+GIMMEH [(LINE|WORD|LETTAR)] <VAR> [OUTTA <filedesc>]
+
+KTHXBYE
+DIAF [<num> [<text>]] (deprecated)
+BYES [<num> [<text>]]
+KTHX  (deprecated for loops)
+IM IN YR [<loop label>]
+VISIBLE <stuff>[!]
+I HAS A <l_value> [ITZ ...]
+[## IN MAH]* <var>
+LOL <var> R <val>
+GTFO (deprecated)
+
+a UP b        : a +
+UPZ a!![b     : a += b (b=1)
+a NERF b      : a - b
+NERFZ a!![b]  : a -= b (b=1)
+a TIEMZ b     : a * b
+TIEMZD a!![b] : a *= b (b=1)
+a OVAR b      : a / b
+OVARZ a!![b]  : a /= b (b=1)
+
+HAI [(TO|2) <version (IRCSPECZ)>]
+IZ <cond> [?] [(.|\n) YARLY] (.|\n) <code> (.|\n) [MEBBE <cond> [!] (.|\n) <code> (.|\n)] [NOWAI (.|\n) <code> (.|\n)] KTHX
+WTF [IZ] <condition>? { OMG <literal> [!] <statements> } [ OMGWTF [?] <statements ] KTHX
+ENUF [[OV [UR|YR]] <label>]
+MOAR [[OV [UR|YR]] <label>]
+IM OUTTA YR [<loop label>]
+BTW <comment>
+
+IRCSPEC version numbers: Roman numeral style
+	- Z = 1
+	- X = 5
+	- C = 10
+	- V = 50
