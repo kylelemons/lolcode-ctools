@@ -35,20 +35,44 @@ namespace LOLCode
   class CompilerContext
   {
     public:
-      unsigned int indent; /*!< Holds the current output indentation. =) */
+      const static int tab_width = 20;
+      const static string ret_reg;
+      const static string var_reg;
+      const static string cnt_reg;
+      const static string val_reg;
+      const static string dim_reg;
+      const static string ptr_reg;
+      const static string frame_ptr;
+      const static string stack_ptr;
+
       unsigned int counter; /*!< This counter remains unique and should only increment */
+      string filename; /*!< Set this to the input filename (used in comment generation) */
 
       map<string,bool> flags; /*!< Holds various flags that should persist */
-      vector<string> file_lines; /*!< Holds the source of the output program */
-      map<string,string> symbols; /*!< Holds the symbols we're using and their types */
-      map<string,string> variables; /*!< Holds the variables that we're using and their types */
-      map<string, vector<int> > dimensions; /*!< Holds the sizes of the arrays we're using */
+      vector<string> header_pieces; /*!< Holds the source of the output program's header */
+      vector<string> file_pieces; /*!< Holds the source of the output program */
+      map<string, map<string,int> > offset; /*!< Holds the symbols we're using and their offsets */
+      map<string, map<string,string> > variables; /*!< Holds the variables that we're using and their types */
+      map<string, map<string,vector<int> > > dimensions; /*!< Holds the sizes of the arrays we're using */
 
-      stack<int> int_stack;
-      stack<string> string_stack;
-      stack<string> context_stack;
+      map<int,string> int_constants; /*!< Holds the integer constants and their names */
+      map<string,string> string_constants; /*!< Holds the string constants and their names */
+
+      stack<int> int_stack; /*!< Stack up ints for passing back and forth between functions */
+      stack<string> string_stack; /*!< Stack up strings for passing back and forth between functions */ 
+      stack<string> context_stack; /*!< Stack up strings representing what blocks we're in */
+      stack<string> varcontext_stack; /*!< Stack up strings when we change variable exclusive scope */
+
+      map<string,int> mem_stack; /*!< Holds where the current %esp is relative to %ebp (for use in allocating local variables) */
 
       CompilerContext();
+
+      void header(string piece, unsigned line = 0);
+      void header_raw(string piece);
+      void output(string piece, string comment = "");
+      void output(string piece, unsigned lineno);
+      void output_raw(string piece);
+      string build_file(); 
   };
 
   /*! \brief The Abstract Syntax Tree (A.S.T) Node */

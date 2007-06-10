@@ -3,6 +3,10 @@ using std::cout;
 using std::cerr;
 using std::endl;
 using std::flush;
+using std::ios;
+
+#include <fstream>
+using std::ofstream;
 
 #include <string>
 using std::string;
@@ -98,6 +102,10 @@ int main(int argc, char **argv)
     {
       HookFunc run = hook_search( type_names[root->type] );
       run(root, context);
+      
+      ofstream fout(output_file.c_str(), ios::out);
+      fout << context.build_file() << std::flush;
+      fout.close();
     }
   }
   catch (HookError e)
