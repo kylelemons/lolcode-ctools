@@ -106,6 +106,7 @@ BTW.*$                  { yylval.ulong=curline; return COMMENT; }
 "LIEK"                   { yylval.ulong=curline; return EQUALTO; }
 "LINE"                   { yylval.ulong=curline; return LINE; }
 "LOL"                    { yylval.ulong=curline; return LOL; }
+LOL(OL)+                 { yylval.ulong=curline; yyless(2); unput('\n'); curline--; return LOL; }
 "NERF"                   { yylval.ulong=curline; return MINUS; }
 "NERFZ"                  { yylval.ulong=curline; return MINUSEQ; }
 "NOT"                    { yylval.ulong=curline; return NOT; }
@@ -128,7 +129,7 @@ BTW.*$                  { yylval.ulong=curline; return COMMENT; }
 "YARLY"                  { yylval.ulong=curline; return YARLY; }
 \?                      { yylval.ulong=curline; return P_QMARK; }
 \!                      { yylval.ulong=curline; return P_EXCL; }
-[A-Za-z]+               { yylval.str = strdup(yytext); return T_WORD; }
+[A-Za-z0-9_]+           { yylval.str = strdup(yytext); return T_WORD; }
 [.\n]                   { if (*yytext == '\n') ++curline; yylval.ulong=curline; return NEWLINE; }
 [\t ]+                  { /* Ignore whitespace */; }
 %%

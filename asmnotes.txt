@@ -1,0 +1,10 @@
+sizeof(nvar) = 16
+nvar->var_type = (%nvar)
+nvar->dim_cnt = 4(%nvar)
+nvar->dims = 8(%nvar)
+nvar->vals = 12(%nvar)
+
+To malloc:
+pushl $16;
+call malloc;
+popl %eax;

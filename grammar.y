@@ -6,6 +6,7 @@
 // abstract syntax tree
 #include "ast.h"
 
+int yylex();
 void yyerror(const char *str);
 int yywrap();
 
@@ -71,7 +72,7 @@ void *cdup(char x)
 %type <node> self_assignment stmt stmts
 %type <ulong> prog_start prog_end
 
-%expect 94
+%expect 90
 
 %start program
 
@@ -83,7 +84,7 @@ argsep : ARGSEP
        | /* nothin */
 ;
 
-array : ARR word P_EXCL P_EXCL expr { $$ = CN(TN,LN); ALL($$,$2,$5); } 
+array : ARR array P_EXCL P_EXCL expr { $$ = CN(TN,LN); ALL($$,$2,$5); } 
       | word                        { $$ = CN(TN,LN); AL($$,$1); }
 ;
 
@@ -100,7 +101,7 @@ array_index : T_NUMBER ARR { $$ = CT(TN,LN); AL($$,idup($1)); }
 ;
 */
 
-assignment : LOL array R expr     { $$ = CN(TN,LN); ALL($$,$2,$4); }
+assignment : array R expr     { $$ = CN(TN,LN); ALL($$,$1,$3); }
 ;
 
 brk : GTFO { $$ = CT(TN,LN); }
@@ -199,7 +200,7 @@ input_from : /* empty */     { $$ = CT(TN,LN); }
 input : GIMMEH input_type array input_from { $$ = CN(TN,LN); ALLL($$,$2,$3,$4); }
 ;
 
-loop : INFLOOP word end_stmt stmts KTHX     { $$ = CN(TN,$1); ALL($$,$2,$4); }
+loop : INFLOOP word end_stmt stmts LOL     { $$ = CN(TN,$1); ALL($$,$2,$4); }
 ;
 
 number : T_NUMBER         { $$ = CT(TN,LN); AL($$,idup($1)); }

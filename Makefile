@@ -1,11 +1,13 @@
 CC=gcc
 CPP=g++
 
-CFLAGS=-Wall -fPIC -ggdb
+CFLAGS=-Wall -Werror -fPIC -ggdb
 CPPFLAGS=${CFLAGS}
 
 CCOMPILE=${CC} ${CFLAGS} -c
 CPPCOMPILE=${CPP} ${CPPFLAGS} -c
+CASSEMBLE=${CC} ${CFLAGS} -m32 -c
+CGENAS=${CC} ${CFLAGS} -m32 -S
 
 LINK=${CPP} ${LFLAGS} -o
 LEX=flex
@@ -22,7 +24,7 @@ BIS_SOURCE_OBJ=${BIS_PREFIX}.o
 
 MY_OBJ=ast.o lcc.o lolcode.o
 
-all : lcc
+all : asmutil.s lcc
 
 lcc : ${LEX_SOURCE_OBJ} ${BIS_SOURCE_OBJ} ${MY_OBJ}
 	${LINK} $@ ${LEX_SOURCE_OBJ} ${BIS_SOURCE_OBJ} ${MY_OBJ}
@@ -41,16 +43,20 @@ ${BIS_SOURCE_OUT} : grammar.y lexer.l
 
 lcc.o : lcc.cpp lolcode.hpp ast.h
 
-lolcode.o : lolcode.cpp lolcode.hpp ast.h
+lolcode.o : lolcode.cpp lolcode.hpp ast.h asmutil.h
 
 clean :
 	@echo "  CLEAN"
-	rm .o lcc
+	rm *.o *.s lcc
 	rm *.yy.* *.tab.* grammar.output 
 	rm -rf help/
 
 doc : doxygen.conf
 	doxygen doxygen.conf
+
+%.o : %.s
+	@echo "  AS      $@"
+	${CASSEMBLE} $<
 
 %.o : %.c %.h
 	@echo "  CC [h]  $@"
@@ -67,6 +73,10 @@ doc : doxygen.conf
 %.o : %.cpp
 	@echo "  CPP     $@"
 	${CPPCOMPILE} $<
+
+%.s : %.c
+	@echo "  C -> S  $@"
+	${CGENAS} $<
 
 % : %.o
 	@echo "  LINK    $@"
